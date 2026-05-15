@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Undangan Pernikahan Yudha dan Alda" />
+    <title>The Wedding of Yudha & Alda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="gate-locked">
+    <div class="desktop-scene" aria-hidden="true">
+      <div class="desktop-photo"></div>
+      <div class="desktop-copy">
+        <span>The Wedding of</span>
+        <strong>Yudha dan Alda</strong>
+        <small>Jumat, 26 Juni 2026</small>
+      </div>
+    </div>
+
+    <main class="invitation-shell">
+      <section class="gate" id="gate">
+        <div class="gate__backdrop"></div>
+        <div class="gate__content">
+          <p class="gate__dear">Dear,</p>
+          <div class="recipient">
+            <strong id="recipientName">Bapak/Ibu/Saudara/i</strong>
+            <span>You Are Invited!</span>
+          </div>
+          <div class="gate__title">
+            <span>The Wedding Celebration of</span>
+            <h1>Yudha & Alda</h1>
+          </div>
+          <button class="button button--light" id="openInvitation" type="button">Open Invitation</button>
+        </div>
+      </section>
+
+      <audio id="weddingMusic" src="assets/assetsmusicmp3.mp3" preload="none" loop></audio>
+      <button class="music-toggle" id="musicToggle" type="button" aria-label="Putar atau hentikan musik">
+        <span></span>
+      </button>
+
+      <section class="hero section" id="home">
+        <div class="hero__photo"></div>
+        <div class="hero__content">
+          <p class="eyebrow">The Wedding of</p>
+          <h2>Yudha<br />&<br />Alda</h2>
+          <p>26 Juni 2026</p>
+        </div>
+      </section>
+
+      <section class="section quote">
+        <div class="ornament"></div>
+        <p>
+          "Dan mereka keduanya akan menjadi satu daging, jadi mereka tidak lagi menjadi dua orang, melainkan satu.Oleh karena itu apa yang telah dipersatukan Tuhan, janganlah manusia memisahkan."
+        </p>
+        <span>Markus 10:8-9</span>
+      </section>
+
+      <section class="section couple">
+        <p class="eyebrow">Salve</p>
+        <h2>Dengan memanjatkan puji syukur kepada Tuhan yang maha esa</h2>
+        <p>
+          "Tuhan membuat segala sesuatu indah pada waktunya. Indah ketika Ia mempertemukan, menumbuhkan kasih, dan mempersatukan kami. Bersama ini kami mengundang Bapak/Ibu/Saudara/i untuk berbagi kebahagiaan dalam pernikahan kudus kami."
+        </p>
+
+        <article class="person">
+          <div class="person__image person__image--groom"></div>
+          <p class="role">Mempelai Pria</p>
+          <h3>Albertus Yudha Sanjaya</h3>
+          <p>Putra dari Bapak Budiharso & Ibu Waldetrudis</p>
+        </article>
+
+        <div class="ampersand">&</div>
+
+        <article class="person">
+          <div class="person__image person__image--bride"></div>
+          <p class="role">Mempelai Wanita</p>
+          <h3>Arnalda Janssencia Lopes</h3>
+          <p>Putra dari Bapak Kristovao Lopes & Ibu Fin Thani</p>
+        </article>
+      </section>
+
+      <section class="section countdown-wrap">
+        <p class="eyebrow">Menuju Hari Bahagia</p>
+        <h2>Save The Date</h2>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div><strong>00</strong><span>Hari</span></div>
+          <div><strong>00</strong><span>Jam</span></div>
+          <div><strong>00</strong><span>Menit</span></div>
+          <div><strong>00</strong><span>Detik</span></div>
+        </div>
+      </section>
+
+      <section class="section event">
+        <p class="eyebrow">Rangkaian Acara</p>
+        <h2>Pemberkatan & Resepsi</h2>
+
+        <article class="event-card event-card--blessing">
+          <span>Pemberkatan Nikah</span>
+          <h3>Jumat, 26 Juni 2026</h3>
+          <p>11.00 WIB - selesai</p>
+          <p>Gereja Paroki St. Gregorius Agung Oeleta<br />Oeleta, kota Kupang</p>
+          <a class="button" href="https://maps.google.com" target="_blank" rel="noreferrer">Lihat Lokasi</a>
+        </article>
+
+        <article class="event-card event-card--reception">
+          <span>Resepsi</span>
+          <h3>Jumat, 26 Juni 2026</h3>
+          <p>18.00 - selesai</p>
+          <p>Subasuka Paradise<br />Jl. Terusan Timor Raya No.126, Klp. Lima, Kec. Klp. Lima, Kota Kupang, Nusa Tenggara Timur</p>
+          <a class="button" href="https://maps.google.com" target="_blank" rel="noreferrer">Lihat Lokasi</a>
+        </article>
+      </section>
+
+      <section class="section gallery">
+        <p class="eyebrow">Our Moment</p>
+        <h2>Wedding Gallery</h2>
+        <div class="gallery__grid">
+          <button class="gallery__item gallery__item--one" type="button" data-image="assets/gallery-1.jpeg" aria-label="Foto galeri 1"></button>
+          <button class="gallery__item gallery__item--two" type="button" data-image="assets/gallery-2.jpeg" aria-label="Foto galeri 2"></button>
+          <button class="gallery__item gallery__item--three" type="button" data-image="assets/gallery-3.jpeg" aria-label="Foto galeri 3"></button>
+          <button class="gallery__item gallery__item--four" type="button" data-image="assets/gallery-4.jpeg" aria-label="Foto galeri 4"></button>
+          <button class="gallery__item gallery__item--five" type="button" data-image="assets/gallery-5.jpeg" aria-label="Foto galeri 5"></button>
+          <button class="gallery__item gallery__item--six" type="button" data-image="assets/gallery-6.jpeg" aria-label="Foto galeri 6"></button>
+        </div>
+      </section>
+
+      <section class="section rsvp">
+        <p class="eyebrow">Konfirmasi Kehadiran</p>
+        <h2>RSVP</h2>
+        <form id="rsvpForm">
+          <label>
+            Nama
+            <input name="name" type="text" placeholder="Nama Anda" required />
+          </label>
+          <label>
+            Kehadiran
+            <select name="attendance" required>
+              <option value="">Pilih konfirmasi</option>
+              <option>Hadir</option>
+              <option>Belum bisa hadir</option>
+            </select>
+          </label>
+          <label>
+            Ucapan
+            <textarea name="message" rows="4" placeholder="Tulis doa dan ucapan"></textarea>
+          </label>
+          <button class="button" type="submit">Kirim Ucapan</button>
+        </form>
+        <div class="wishes" id="wishes"></div>
+      </section>
+
+      <section class="section gift">
+        <p class="eyebrow">Wedding Gift</p>
+        <h2>Amplop Digital</h2>
+        <p>Doa restu Bapak/Ibu/Saudara/i adalah hadiah terindah bagi kami.</p>
+        <div class="bank-card">
+          <span>Bank Mandiri</span>
+          <strong id="accountNumber">1234567890</strong>
+          <p>a.n. Arnalda jannsencia Lopes</p>
+          <button class="button button--ghost" id="copyAccount" type="button">Salin Nomor</button>
+        </div>
+      </section>
+
+      <section class="section closing">
+        <div class="closing__photo"></div>
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+        <h2>Yudha & Alda</h2>
+        <span>Terima kasih</span>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau foto">
+      <button type="button" id="closeLightbox" aria-label="Tutup pratinjau">x</button>
+      <div id="lightboxImage"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
