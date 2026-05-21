@@ -19,9 +19,7 @@ body {
   margin: 0;
   min-height: 100vh;
   color: #2b2b2b;
-  background:
-    radial-gradient(circle at top left, rgba(198, 169, 105, 0.14), transparent 32rem),
-    #f8f5f0;
+  background: #1d1c1a;
   font-family: var(--font-cormorant), serif;
   letter-spacing: 0;
 }
@@ -60,7 +58,7 @@ a {
 .section-band {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(5rem, 11vw, 8.5rem);
+  padding-block: clamp(5rem, 10vw, 7.5rem);
 }
 
 .luxury-card {

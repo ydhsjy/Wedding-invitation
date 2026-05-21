@@ -39,12 +39,15 @@ export const wedding = {
   quote:
     "Dan mereka keduanya akan menjadi satu daging, jadi mereka tidak lagi menjadi dua orang, melainkan satu. Oleh karena itu apa yang telah dipersatukan Tuhan, janganlah manusia memisahkan.",
   quoteSource: "Markus 10:8-9",
+  marriageQuote:
+    "A great marriage is not when the 'perfect couple' comes together. It is when an imperfect couple learns to enjoy their differences.",
   audio: assetPath("/assets/assetsmusicmp3.mp3"),
   images: {
     opening: assetPath("/assets/awal.jpeg"),
     desktop: assetPath("/assets/utama%20kiri.jpeg"),
     hero: assetPath("/assets/kanan%20awal.jpeg"),
     quote: assetPath("/assets/bg1.jpeg"),
+    marriageQuote: assetPath("/assets/quote.jpeg"),
     closing: assetPath("/assets/ending.jpeg")
   },
   couples: [
@@ -68,7 +71,7 @@ export const wedding = {
       time: "11.00 WIB - selesai",
       venue: "Gereja Paroki St. Gregorius Agung Oeleta",
       address: "Oeleta, Kota Kupang",
-      mapUrl: "https://maps.google.com",
+      mapUrl: "https://maps.app.goo.gl/Lizi1yNfQDGyqqXA7",
       image: assetPath("/assets/bg2.jpeg")
     },
     {
@@ -77,17 +80,19 @@ export const wedding = {
       time: "18.00 WITA - selesai",
       venue: "Subasuka Paradise",
       address: "Jl. Terusan Timor Raya No.126, Klp. Lima, Kota Kupang",
-      mapUrl: "https://maps.google.com",
-      image: assetPath("/assets/bg3.jpeg")
+      mapUrl: "https://maps.app.goo.gl/Pm9YNXRVp7oNwc8M7",
+      image: assetPath("/assets/bg1.jpeg")
     }
   ] satisfies WeddingEvent[],
   gallery: [
     assetPath("/assets/gallery-1.jpeg"),
     assetPath("/assets/gallery-2.jpeg"),
-    assetPath("/assets/gallery-3.jpeg"),
+    assetPath("/assets/gallery3.jpeg"),
     assetPath("/assets/gallery-4.jpeg"),
     assetPath("/assets/gallery-5.jpeg"),
-    assetPath("/assets/gallery-6.jpeg")
+    assetPath("/assets/gallery-6.jpeg"),
+    assetPath("/assets/gallery-7.jpeg"),
+    assetPath("/assets/gallery-8.jpeg")
   ],
   stories: [
     {

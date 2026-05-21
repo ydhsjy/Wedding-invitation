@@ -5,14 +5,15 @@ import { wedding } from "@/data/wedding";
 
 export function QuoteSection() {
   return (
-    <section className="section-band bg-ink text-ivory">
-      <Image src={wedding.images.quote} alt="" fill sizes="100vw" className="object-cover opacity-25" />
-      <div className="absolute inset-0 bg-ink/70" />
+    <section className="section-band bg-paper text-ink">
       <Container className="relative z-10">
         <MotionReveal className="mx-auto max-w-3xl text-center">
           <div className="mx-auto mb-8 h-px w-24 bg-gold" />
-          <blockquote className="font-serif text-3xl leading-tight text-balance sm:text-5xl">{wedding.quote}</blockquote>
-          <cite className="mt-8 block font-sans text-xs font-semibold uppercase not-italic tracking-[0.28em] text-gold">{wedding.quoteSource}</cite>
+          <blockquote className="font-serif text-3xl leading-tight text-balance text-ink sm:text-5xl">{wedding.quote}</blockquote>
+          <cite className="mt-8 block font-sans text-xs font-semibold uppercase not-italic tracking-[0.28em] text-clay">{wedding.quoteSource}</cite>
+          <div className="relative mx-auto mt-12 aspect-[4/5] max-w-sm overflow-hidden rounded-t-full rounded-b-lg shadow-premium">
+            <Image src={wedding.images.quote} alt="Yudha dan Alda" fill sizes="(max-width: 768px) 82vw, 360px" className="object-cover" />
+          </div>
         </MotionReveal>
       </Container>
     </section>

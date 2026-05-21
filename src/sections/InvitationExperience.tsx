@@ -3,6 +3,7 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { LoadingScreen } from "@/components/LoadingScreen";
+import { DesktopScene } from "@/components/DesktopScene";
 import { MobileNav } from "@/components/MobileNav";
 import { MusicButton } from "@/components/MusicButton";
 import { wedding } from "@/data/wedding";
@@ -15,10 +16,10 @@ import { FooterSection } from "@/sections/FooterSection";
 import { GallerySection } from "@/sections/GallerySection";
 import { GiftSection } from "@/sections/GiftSection";
 import { HeroSection } from "@/sections/HeroSection";
+import { MarriageQuoteSection } from "@/sections/MarriageQuoteSection";
 import { OpeningSection } from "@/sections/OpeningSection";
 import { QuoteSection } from "@/sections/QuoteSection";
 import { RSVPSection } from "@/sections/RSVPSection";
-import { StorySection } from "@/sections/StorySection";
 
 export function InvitationExperience({ guestName }: { guestName?: string }) {
   const [opened, setOpened] = useState(false);
@@ -37,14 +38,15 @@ export function InvitationExperience({ guestName }: { guestName?: string }) {
         <LoadingScreen />
       </AnimatePresence>
       <OpeningSection guestName={recipient} isOpen={opened} onOpen={() => setOpened(true)} />
-      <main>
+      <DesktopScene />
+      <main className="relative ml-auto min-h-svh w-full overflow-hidden bg-paper shadow-[0_0_80px_rgba(0,0,0,0.32)] lg:w-[min(42vw,640px)]">
         <HeroSection />
         <QuoteSection />
         <CoupleSection />
         <EventSection />
         <CountdownSection />
+        <MarriageQuoteSection />
         <GallerySection />
-        <StorySection />
         <RSVPSection />
         <GiftSection />
         <FooterSection />
