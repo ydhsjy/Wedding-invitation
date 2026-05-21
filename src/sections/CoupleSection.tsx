@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Instagram } from "lucide-react";
+import { Camera } from "lucide-react";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -36,7 +36,7 @@ export function CoupleSection() {
                     className="mt-5 inline-grid h-9 w-9 place-items-center rounded-md bg-ink text-ivory shadow-soft"
                     aria-label={`Instagram ${person.name}`}
                   >
-                    <Instagram className="h-5 w-5" aria-hidden="true" />
+                    <Camera className="h-5 w-5" aria-hidden="true" />
                   </button>
                 </div>
               </article>
