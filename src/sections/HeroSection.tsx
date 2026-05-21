@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { wedding } from "@/data/wedding";
-import { AnimatedText } from "@/components/AnimatedText";
 
 export function HeroSection() {
   const { scrollY } = useScroll();
@@ -17,9 +16,9 @@ export function HeroSection() {
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-ink/0 via-ink/8 to-ink/60" />
       <div className="pointer-events-none absolute inset-x-0 bottom-[-1px] z-10 h-28 bg-paper [clip-path:ellipse(75%_58%_at_50%_100%)]" />
-      <div className="relative z-20 mx-auto flex min-h-svh max-w-6xl flex-col items-center justify-end px-5 pb-28 pt-28 text-center sm:px-8 lg:px-10 lg:pb-32">
+      <div className="relative z-20 mx-auto flex min-h-svh max-w-6xl flex-col items-center justify-end px-5 pb-20 pt-28 text-center sm:px-8 lg:px-10 lg:pb-24">
         <motion.p
-          className="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-gold"
+          className="font-serif text-2xl font-medium leading-none tracking-[0.18em] text-ivory/92 sm:text-3xl"
           initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
@@ -27,20 +26,24 @@ export function HeroSection() {
         >
           The Wedding of
         </motion.p>
-        <h2 className="mt-4 max-w-3xl font-script text-8xl leading-[0.82] sm:text-9xl">
-          <AnimatedText text={wedding.coupleNames} />
-        </h2>
-        <motion.div
-          className="mt-8 flex flex-col gap-2 font-sans text-sm font-semibold uppercase tracking-[0.16em] text-ivory sm:flex-row sm:items-center sm:gap-5"
+        <motion.h2
+          className="mt-4 max-w-3xl font-serif text-6xl font-medium leading-[0.9] tracking-normal text-ivory sm:text-7xl"
           initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
-          transition={{ duration: 0.9, delay: 0.7 }}
+          transition={{ duration: 0.9, delay: 0.38 }}
         >
-          <span>{wedding.dateLabel}</span>
-          <span className="hidden h-px w-12 bg-gold sm:block" />
-          <span>{wedding.location}</span>
-        </motion.div>
+          {wedding.coupleNames}
+        </motion.h2>
+        <motion.p
+          className="mt-5 font-serif text-2xl font-semibold leading-none tracking-[0.28em] text-ivory sm:text-3xl"
+          initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, delay: 0.56 }}
+        >
+          26.06.2026
+        </motion.p>
       </div>
     </section>
   );
