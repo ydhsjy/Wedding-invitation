@@ -5,6 +5,7 @@ export type Couple = {
   name: string;
   parents: string;
   image: string;
+  background: string;
 };
 
 export type WeddingEvent = {
@@ -52,16 +53,18 @@ export const wedding = {
   },
   couples: [
     {
-      role: "Mempelai Pria",
-      name: "Albertus Yudha Sanjaya",
-      parents: "Putra dari Bapak Budiharso & Ibu Waldetrudis",
-      image: assetPath("/assets/Groom.jpeg")
-    },
-    {
       role: "Mempelai Wanita",
       name: "Arnalda Janssencia Lopes",
       parents: "Putri dari Bapak Kristovao Lopes & Ibu Fin Thani",
-      image: assetPath("/assets/Bride.jpeg")
+      image: assetPath("/assets/Bride.jpeg"),
+      background: assetPath("/assets/bg%20bride.jpg")
+    },
+    {
+      role: "Mempelai Pria",
+      name: "Albertus Yudha Sanjaya",
+      parents: "Putra dari Bapak Budiharso & Ibu Waldetrudis",
+      image: assetPath("/assets/Groom.jpeg"),
+      background: assetPath("/assets/bg%20groom.jpg")
     }
   ] satisfies Couple[],
   events: [
@@ -72,7 +75,7 @@ export const wedding = {
       venue: "Gereja Paroki St. Gregorius Agung Oeleta",
       address: "Oeleta, Kota Kupang",
       mapUrl: "https://maps.app.goo.gl/Lizi1yNfQDGyqqXA7",
-      image: assetPath("/assets/bg2.jpeg")
+      image: assetPath("/assets/bg2.jpg")
     },
     {
       title: "Resepsi",
@@ -81,7 +84,7 @@ export const wedding = {
       venue: "Subasuka Paradise",
       address: "Jl. Terusan Timor Raya No.126, Klp. Lima, Kota Kupang",
       mapUrl: "https://maps.app.goo.gl/Pm9YNXRVp7oNwc8M7",
-      image: assetPath("/assets/bg1.jpeg")
+      image: assetPath("/assets/bg3.jpg")
     }
   ] satisfies WeddingEvent[],
   gallery: [
