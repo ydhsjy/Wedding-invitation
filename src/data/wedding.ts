@@ -44,7 +44,16 @@ export const wedding = {
     "A great marriage is not when the 'perfect couple' comes together. It is when an imperfect couple learns to enjoy their differences.",
   audio: assetPath("/assets/assetsmusicmp3.mp3"),
   images: {
-    opening: assetPath("/assets/awal.jpeg"),
+    openingSlides: [
+      assetPath("/assets/Slide1.jpg"),
+      assetPath("/assets/Slide2.jpg"),
+      assetPath("/assets/Slide3.jpg"),
+      assetPath("/assets/Slide4.jpg"),
+      assetPath("/assets/Slide5.jpg"),
+      assetPath("/assets/Slide6.jpg"),
+      assetPath("/assets/Slide7.jpg"),
+      assetPath("/assets/Slide8.jpg")
+    ],
     desktop: assetPath("/assets/utama%20kiri.jpeg"),
     hero: assetPath("/assets/kanan%20awal.jpeg"),
     quote: assetPath("/assets/bg1.jpeg"),

@@ -15,9 +15,16 @@ export function EventSection() {
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {wedding.events.map((event, index) => (
             <MotionReveal key={event.title} delay={index * 0.12}>
-              <article className="relative min-h-[28rem] overflow-hidden rounded-lg p-7 text-ivory shadow-premium sm:p-9">
-                <Image src={event.image} alt="" fill sizes="(max-width: 1024px) 100vw, 560px" className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-b from-ink/35 via-ink/45 to-ink/86" />
+              <article className="relative min-h-[28rem] overflow-hidden rounded-lg bg-ink p-7 text-ivory shadow-premium sm:p-9">
+                <Image
+                  src={event.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 1024px) 82vw, 460px"
+                  className="scale-[0.82] object-contain opacity-70 blur-[2px]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-ink/55 to-ink/90" />
+                <div className="absolute inset-0 bg-ink/18 backdrop-blur-[1px]" />
                 <div className="relative z-10 flex min-h-[24rem] flex-col justify-end">
                   <p className="font-sans text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-gold">{event.title}</p>
                   <h3 className="mt-3 font-serif text-4xl font-medium leading-none sm:text-5xl">{event.date}</h3>
