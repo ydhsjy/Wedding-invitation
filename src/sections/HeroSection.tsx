@@ -1,29 +1,54 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
 import { wedding } from "@/data/wedding";
 
 export function HeroSection() {
+  const slides = wedding.images.openingSlides;
+  const [slideIndex, setSlideIndex] = useState(0);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 900], [0, 160]);
   const scale = useTransform(scrollY, [0, 900], [1.01, 1.08]);
+  const currentSlide = slides[slideIndex];
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setSlideIndex((current) => (current + 1) % slides.length);
+    }, 4500);
+
+    return () => window.clearInterval(interval);
+  }, [slides.length]);
+
+  useEffect(() => {
+    const nextSlide = slides[(slideIndex + 1) % slides.length];
+    const image = new window.Image();
+    image.src = nextSlide;
+  }, [slideIndex, slides]);
 
   return (
     <section id="home" className="relative min-h-svh overflow-hidden bg-[#d8d6d2] text-ivory">
       <motion.div className="absolute inset-0 flex items-end justify-center" style={{ y, scale }}>
-        {wedding.images.openingSlides.map((slide, index) => (
-          <Image
-            key={slide}
-            src={slide}
-            alt="Yudha dan Alda"
-            fill
-            priority={index === 0}
-            sizes="(max-width: 1024px) 100vw, 640px"
-            className="photo-slide object-cover object-center"
-            style={{ animationDelay: `${index * 4}s` }}
-          />
-        ))}
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={currentSlide}
+            className="absolute inset-0"
+            initial={{ opacity: 0, scale: 1.02 }}
+            animate={{ opacity: 1, scale: 1.06 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          >
+            <Image
+              src={currentSlide}
+              alt="Yudha dan Alda"
+              fill
+              priority={slideIndex === 0}
+              sizes="(max-width: 1024px) 100vw, 640px"
+              className="object-cover object-center"
+            />
+          </motion.div>
+        </AnimatePresence>
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-ink/0 via-ink/8 to-ink/60" />
       <div className="pointer-events-none absolute inset-x-0 bottom-[-1px] z-10 h-28 bg-paper [clip-path:ellipse(75%_58%_at_50%_100%)]" />
