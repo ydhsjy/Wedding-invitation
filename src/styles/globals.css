@@ -61,13 +61,13 @@ a {
   padding-block: clamp(5rem, 10vw, 7.5rem);
 }
 
-.opening-slide {
+.photo-slide {
   opacity: 0;
-  animation: opening-slide 32s infinite;
+  animation: photo-slide 32s infinite;
   transform: scale(1.04);
 }
 
-@keyframes opening-slide {
+@keyframes photo-slide {
   0% {
     opacity: 0;
     transform: scale(1.04);

@@ -54,6 +54,7 @@ export const wedding = {
       assetPath("/assets/Slide7.jpg"),
       assetPath("/assets/Slide8.jpg")
     ],
+    opening: assetPath("/assets/awal.jpeg"),
     desktop: assetPath("/assets/utama%20kiri.jpeg"),
     hero: assetPath("/assets/kanan%20awal.jpeg"),
     quote: assetPath("/assets/bg1.jpeg"),

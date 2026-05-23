@@ -12,7 +12,18 @@ export function HeroSection() {
   return (
     <section id="home" className="relative min-h-svh overflow-hidden bg-[#d8d6d2] text-ivory">
       <motion.div className="absolute inset-0 flex items-end justify-center" style={{ y, scale }}>
-        <Image src={wedding.images.hero} alt="Yudha dan Alda" fill priority sizes="(max-width: 1024px) 100vw, 640px" className="object-contain object-bottom" />
+        {wedding.images.openingSlides.map((slide, index) => (
+          <Image
+            key={slide}
+            src={slide}
+            alt="Yudha dan Alda"
+            fill
+            priority={index === 0}
+            sizes="(max-width: 1024px) 100vw, 640px"
+            className="photo-slide object-cover object-center"
+            style={{ animationDelay: `${index * 4}s` }}
+          />
+        ))}
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-ink/0 via-ink/8 to-ink/60" />
       <div className="pointer-events-none absolute inset-x-0 bottom-[-1px] z-10 h-28 bg-paper [clip-path:ellipse(75%_58%_at_50%_100%)]" />

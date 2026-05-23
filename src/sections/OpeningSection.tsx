@@ -21,18 +21,7 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
       aria-hidden={isOpen}
     >
       <div className="absolute inset-0">
-        {wedding.images.openingSlides.map((slide, index) => (
-          <Image
-            key={slide}
-            src={slide}
-            alt=""
-            fill
-            priority={index === 0}
-            sizes="100vw"
-            className="opening-slide object-cover"
-            style={{ animationDelay: `${index * 4}s` }}
-          />
-        ))}
+        <Image src={wedding.images.opening} alt="" fill priority sizes="100vw" className="object-cover" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/48 to-ink/82" />
       <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-ink/55 to-transparent" />
