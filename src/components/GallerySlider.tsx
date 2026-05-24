@@ -13,11 +13,11 @@ export function GallerySlider({ images }: { images: string[] }) {
   };
 
   const onDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-    if (info.offset.x < -60 || info.velocity.x < -400) {
+    if (info.offset.x < -42 || info.velocity.x < -320) {
       move(1);
     }
 
-    if (info.offset.x > 60 || info.velocity.x > 400) {
+    if (info.offset.x > 42 || info.velocity.x > 320) {
       move(-1);
     }
   };
@@ -28,10 +28,10 @@ export function GallerySlider({ images }: { images: string[] }) {
         <motion.div
           className="flex cursor-grab active:cursor-grabbing"
           animate={{ x: `-${active * 100}%` }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ type: "spring", stiffness: 120, damping: 28, mass: 0.9 }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.16}
+          dragElastic={0.24}
           onDragEnd={onDragEnd}
         >
           {images.map((image, index) => (

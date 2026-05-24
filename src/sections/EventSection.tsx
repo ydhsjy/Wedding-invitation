@@ -16,10 +16,10 @@ export function EventSection() {
             description="Dengan kerendahan hati, kami mengharapkan kehadiran dan doa restu pada rangkaian acara berikut."
           />
         </MotionReveal>
-        <div className="mt-10 grid gap-7 lg:grid-cols-2">
+        <div className="mx-auto mt-10 grid max-w-4xl gap-8">
           {wedding.events.map((event, index) => (
             <MotionReveal key={event.title} delay={index * 0.12}>
-              <article className="relative mx-auto min-h-[30rem] w-full max-w-[21.25rem] overflow-hidden rounded-[2rem] bg-[#F7F1EA] px-5 py-8 text-center text-ink shadow-[0_20px_45px_rgba(74,56,46,0.16)] sm:max-w-[24rem] sm:px-7 sm:py-9 lg:min-h-[35rem] lg:max-w-none lg:rounded-[2.75rem] lg:px-9 lg:py-10">
+              <article className="relative mx-auto min-h-[30rem] w-full max-w-[21.25rem] overflow-hidden rounded-[2rem] bg-[#F7F1EA] px-5 py-8 text-center text-ink shadow-[0_20px_45px_rgba(74,56,46,0.16)] sm:max-w-[24rem] sm:px-7 sm:py-9 lg:min-h-[35rem] lg:max-w-[30rem] lg:rounded-[2.75rem] lg:px-9 lg:py-10">
                 <div className="pointer-events-none absolute inset-x-0 top-[-5rem] flex justify-center opacity-[0.12] blur-[0.75px]">
                   <Image src={event.image} alt="" width={450} height={354} className="h-72 w-80 object-contain sm:h-80 sm:w-96" />
                 </div>

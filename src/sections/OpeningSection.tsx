@@ -38,7 +38,7 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
         </div>
 
         <div className="mt-auto">
-          <div className="mx-auto w-[82%] translate-y-8 rounded-md border border-ivory/24 bg-ivory/10 px-4 py-4 backdrop-blur-md">
+          <div className="mx-auto w-[82%] translate-y-20 rounded-md border border-ivory/24 bg-ivory/10 px-4 py-4 backdrop-blur-md">
             <p className="text-xs text-ivory/80">Dear,</p>
             <p className="mt-1.5 font-serif text-[13px] font-semibold leading-none">{guestName}</p>
             <p className="mt-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-gold">You are invited</p>
@@ -47,7 +47,7 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
           <button
             type="button"
             onClick={onOpen}
-            className="mx-auto mt-14 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-ivory px-7 font-button text-[15px] font-bold tracking-normal text-ink shadow-premium transition hover:bg-gold hover:text-ivory"
+            className="mx-auto mt-20 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-ivory px-7 font-button text-[15px] font-bold tracking-normal text-ink shadow-premium transition hover:bg-gold hover:text-ivory"
           >
             <MailOpen className="h-4 w-4" aria-hidden="true" />
             Open Invitation
