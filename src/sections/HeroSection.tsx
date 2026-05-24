@@ -54,7 +54,7 @@ export function HeroSection() {
       <div className="pointer-events-none absolute inset-x-0 bottom-[-1px] z-10 h-28 bg-paper [clip-path:ellipse(75%_58%_at_50%_100%)]" />
       <div className="relative z-20 mx-auto flex min-h-svh max-w-6xl flex-col items-center justify-end px-5 pb-20 pt-28 text-center sm:px-8 lg:px-10 lg:pb-24">
         <motion.p
-          className="font-sans text-xs font-semibold uppercase leading-none tracking-[0.21em] text-ivory/92 sm:text-[15px]"
+          className="font-sans text-xs font-semibold uppercase leading-none tracking-[0.21em] text-ivory/92 sm:text-[15px] lg:text-[8px]"
           initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
@@ -63,7 +63,7 @@ export function HeroSection() {
           The Wedding of
         </motion.p>
         <motion.h2
-          className="mt-4 max-w-3xl font-script text-[57px] font-normal leading-none tracking-normal text-ivory sm:text-[71px]"
+          className="mt-4 max-w-3xl font-script text-[57px] font-normal leading-none tracking-normal text-ivory sm:text-[71px] lg:text-[36px]"
           initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
@@ -72,7 +72,7 @@ export function HeroSection() {
           {wedding.coupleNames}
         </motion.h2>
         <motion.p
-          className="mt-5 font-sans text-sm font-semibold leading-none tracking-[0.21em] text-ivory sm:text-[21px]"
+          className="mt-5 font-sans text-sm font-semibold leading-none tracking-[0.21em] text-ivory sm:text-[21px] lg:text-[11px]"
           initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}

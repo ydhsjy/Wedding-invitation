@@ -100,7 +100,7 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const closeLightbox = document.getElementById("closeLightbox");
 
-document.querySelectorAll(".gallery__item").forEach((item, index) => {
+document.querySelectorAll(".gallery__item").forEach((item) => {
   item.addEventListener("click", () => {
     lightboxImage.className = "";
     lightboxImage.style.backgroundImage = `url("${item.dataset.image}")`;

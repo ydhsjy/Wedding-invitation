@@ -10,14 +10,14 @@ export function DesktopScene() {
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/58 to-transparent" />
       <div className="relative z-10 flex min-h-svh items-end px-12 pb-20 xl:px-24">
         <div className="max-w-xl">
-          <p className="font-sans text-[15px] font-semibold uppercase tracking-[0.21em]">The Wedding of</p>
-          <h1 className="mt-5 font-script text-[71px] font-normal leading-none xl:text-[77px]">Yudha &<br />Alda</h1>
-          <p className="mt-6 font-sans text-[21px] font-semibold uppercase tracking-[0.21em]">{wedding.dateLabel}</p>
+          <p className="font-sans text-[8px] font-semibold uppercase tracking-[0.21em]">The Wedding of</p>
+          <h1 className="mt-5 font-script text-[36px] font-normal leading-none xl:text-[39px]">Yudha &<br />Alda</h1>
+          <p className="mt-6 font-sans text-[11px] font-semibold uppercase tracking-[0.21em]">{wedding.dateLabel}</p>
           <div className="mt-12 h-px w-36 bg-ivory/34" />
         </div>
       </div>
       <div className="absolute bottom-10 right-12 z-10 flex items-center gap-3 text-ivory/82 xl:right-16">
-        <p className="font-serif text-base font-medium">Scroll ke bawah</p>
+        <p className="font-serif text-[8px] font-medium">Scroll ke bawah</p>
         <ArrowDown className="h-5 w-5 animate-bounce" aria-hidden="true" />
       </div>
     </aside>

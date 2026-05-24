@@ -32,22 +32,22 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <div>
-          <p className="font-sans text-xs font-semibold uppercase tracking-[0.21em] text-gold">The Wedding of</p>
-          <h1 className="mt-4 font-script text-[57px] font-normal leading-none">{wedding.coupleNames}</h1>
-          <p className="mt-3 font-sans text-sm font-semibold uppercase tracking-[0.21em] text-ivory/75">{wedding.dateLabel}</p>
+          <p className="font-sans text-xs font-semibold uppercase tracking-[0.21em] text-gold lg:text-[6px]">The Wedding of</p>
+          <h1 className="mt-4 font-script text-[57px] font-normal leading-none lg:text-[29px]">{wedding.coupleNames}</h1>
+          <p className="mt-3 font-sans text-sm font-semibold uppercase tracking-[0.21em] text-ivory/75 lg:text-[7px]">{wedding.dateLabel}</p>
         </div>
 
         <div className="mt-auto">
           <div className="mx-auto w-[82%] translate-y-20 rounded-md border border-ivory/24 bg-ivory/10 px-4 py-4 backdrop-blur-md">
-            <p className="text-xs text-ivory/80">Dear,</p>
-            <p className="mt-1.5 font-serif text-[13px] font-semibold leading-none">{guestName}</p>
-            <p className="mt-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-gold">You are invited</p>
+            <p className="text-xs text-ivory/80 lg:text-[6px]">Dear,</p>
+            <p className="mt-1.5 font-serif text-[13px] font-semibold leading-none lg:text-[7px]">{guestName}</p>
+            <p className="mt-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-gold lg:text-[5px]">You are invited</p>
           </div>
 
           <button
             type="button"
             onClick={onOpen}
-            className="mx-auto mt-20 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-ivory px-7 font-button text-[15px] font-bold tracking-normal text-ink shadow-premium transition hover:bg-gold hover:text-ivory"
+            className="mx-auto mt-28 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-ivory px-7 font-button text-[15px] font-bold tracking-normal text-ink shadow-premium transition hover:bg-gold hover:text-ivory lg:text-[8px]"
           >
             <MailOpen className="h-4 w-4" aria-hidden="true" />
             Open Invitation

@@ -32,19 +32,19 @@ export function EventSection() {
                     sizes="(max-width: 768px) 240px, 288px"
                     className="mb-2 h-48 w-60 object-contain opacity-70 blur-[0.25px] sm:h-60 sm:w-72"
                   />
-                  <h3 className="max-w-[18rem] break-words font-serif text-[34px] font-normal uppercase leading-[0.98] tracking-[0.04em] text-ink sm:text-[42px] lg:text-[50px]">
+                  <h3 className="max-w-[18rem] break-words font-serif text-[34px] font-normal uppercase leading-[0.98] tracking-[0.04em] text-ink sm:text-[42px] lg:text-[25px]">
                     {event.title}
                   </h3>
                   <div className="mt-6 h-px w-full max-w-[17rem] bg-ink/65 sm:max-w-[20rem]" />
-                  <p className="mt-7 font-serif text-[18px] leading-7 text-ink sm:text-[19px]">{event.date}</p>
-                  <p className="mt-4 font-serif text-[18px] leading-7 text-ink sm:text-[19px]">{event.time}</p>
-                  <p className="mt-4 font-serif text-[18px] font-semibold leading-7 text-ink sm:text-[19px]">{event.venue}</p>
-                  <p className="mt-2 max-w-[17rem] font-serif text-[18px] leading-7 text-ink/88 sm:max-w-xs sm:text-[19px]">{event.address}</p>
+                  <p className="mt-7 font-serif text-[18px] leading-7 text-ink sm:text-[19px] lg:text-[10px] lg:leading-4">{event.date}</p>
+                  <p className="mt-4 font-serif text-[18px] leading-7 text-ink sm:text-[19px] lg:text-[10px] lg:leading-4">{event.time}</p>
+                  <p className="mt-4 font-serif text-[18px] font-semibold leading-7 text-ink sm:text-[19px] lg:text-[10px] lg:leading-4">{event.venue}</p>
+                  <p className="mt-2 max-w-[17rem] font-serif text-[18px] leading-7 text-ink/88 sm:max-w-xs sm:text-[19px] lg:text-[10px] lg:leading-4">{event.address}</p>
                   <a
                     href={event.mapUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-full bg-clay px-6 font-serif text-[17px] font-semibold text-ivory transition hover:bg-ink"
+                    className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-full bg-clay px-6 font-serif text-[17px] font-semibold text-ivory transition hover:bg-ink lg:text-[9px]"
                   >
                     <MapPin className="h-4 w-4" aria-hidden="true" />
                     Google Maps

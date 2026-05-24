@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence } from "framer-motion";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { DesktopScene } from "@/components/DesktopScene";
 import { MobileNav } from "@/components/MobileNav";
@@ -21,16 +21,23 @@ import { OpeningSection } from "@/sections/OpeningSection";
 import { QuoteSection } from "@/sections/QuoteSection";
 import { RSVPSection } from "@/sections/RSVPSection";
 
+function subscribeToGuestName() {
+  return () => {};
+}
+
+function getUrlGuestName() {
+  if (typeof window === "undefined") {
+    return undefined;
+  }
+
+  return new URLSearchParams(window.location.search).get("to") || undefined;
+}
+
 export function InvitationExperience({ guestName }: { guestName?: string }) {
   const [opened, setOpened] = useState(false);
-  const [urlGuestName, setUrlGuestName] = useState<string | undefined>(guestName);
-  const recipient = useMemo(() => formatGuestName(urlGuestName), [urlGuestName]);
+  const urlGuestName = useSyncExternalStore(subscribeToGuestName, getUrlGuestName, () => undefined);
+  const recipient = useMemo(() => formatGuestName(urlGuestName || guestName), [guestName, urlGuestName]);
   useLockBody(!opened);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    setUrlGuestName(params.get("to") || guestName);
-  }, [guestName]);
 
   return (
     <>

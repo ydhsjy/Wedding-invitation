@@ -5,6 +5,14 @@
 :root {
   color-scheme: light;
   background: #f8f5f0;
+  --font-pinyon-script: "Palatino Linotype", "Book Antiqua", cursive;
+  --font-eb-garamond: Georgia, "Times New Roman", serif;
+  --font-playfair-display: Georgia, "Times New Roman", serif;
+  --font-quattrocento: Georgia, "Times New Roman", serif;
+  --font-bellefair: Georgia, "Times New Roman", serif;
+  --font-shippori-mincho: Georgia, "Times New Roman", serif;
+  --font-cinzel-decorative: Georgia, "Times New Roman", serif;
+  --font-crete-round: Georgia, "Times New Roman", serif;
 }
 
 * {

@@ -58,7 +58,7 @@ export const wedding = {
     desktop: assetPath("/assets/Desktop.jpeg"),
     hero: assetPath("/assets/kanan%20awal.jpeg"),
     quote: assetPath("/assets/bg1.jpeg"),
-    countdown: assetPath("/assets/bg%20all.jpeg"),
+    countdown: assetPath("/assets/bg%20quote.jpg"),
     marriageQuote: assetPath("/assets/quote.jpeg"),
     closing: assetPath("/assets/ending.jpeg")
   },
