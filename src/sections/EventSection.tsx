@@ -26,10 +26,10 @@ export function EventSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-ink/55 to-ink/90" />
                 <div className="absolute inset-0 bg-ink/18 backdrop-blur-[1px]" />
                 <div className="relative z-10 flex min-h-[24rem] flex-col justify-end">
-                  <p className="font-sans text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-gold">{event.title}</p>
-                  <h3 className="mt-3 font-serif text-4xl font-medium leading-none sm:text-5xl">{event.date}</h3>
-                  <p className="mt-4 font-sans text-sm uppercase tracking-[0.16em] text-ivory/80">{event.time}</p>
-                  <p className="mt-5 text-xl leading-8 text-ivory/85">
+                  <p className="font-sans text-xs font-semibold uppercase tracking-[0.21em] text-gold sm:text-[15px]">{event.title}</p>
+                  <h3 className="mt-3 font-serif text-[25px] font-semibold leading-none sm:text-[32px]">{event.date}</h3>
+                  <p className="mt-4 font-sans text-sm font-semibold uppercase tracking-[0.21em] text-ivory/80">{event.time}</p>
+                  <p className="mt-5 text-[15px] leading-[21px] text-ivory/85 sm:text-base sm:leading-6">
                     {event.venue}
                     <br />
                     {event.address}
@@ -38,7 +38,7 @@ export function EventSection() {
                     href={event.mapUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-7 inline-flex min-h-11 w-fit items-center gap-2 rounded-full bg-ivory px-5 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-ink transition hover:bg-gold hover:text-ivory"
+                    className="mt-7 inline-flex min-h-11 w-fit items-center gap-2 rounded-full bg-ivory px-5 font-button text-[15px] font-bold text-ink transition hover:bg-gold hover:text-ivory"
                   >
                     <MapPin className="h-4 w-4" aria-hidden="true" />
                     Lihat Lokasi

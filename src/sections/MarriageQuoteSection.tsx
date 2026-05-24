@@ -8,8 +8,8 @@ export function MarriageQuoteSection() {
     <section className="section-band bg-[#EEE5DA]">
       <Container>
         <MotionReveal className="mx-auto max-w-3xl text-center">
-          <p className="font-script text-5xl leading-tight text-ink sm:text-6xl">Marriage is a beautiful art</p>
-          <blockquote className="mx-auto mt-8 max-w-2xl font-serif text-3xl italic leading-tight text-clay text-balance sm:text-5xl">
+          <p className="font-script text-[45px] font-normal leading-none text-ink sm:text-[65px]">Marriage is a beautiful art</p>
+          <blockquote className="mx-auto mt-8 max-w-2xl font-serif text-base italic leading-6 text-clay text-balance sm:text-[32px] sm:leading-none">
             &ldquo;{wedding.marriageQuote}&rdquo;
           </blockquote>
           <div className="relative mx-auto mt-12 aspect-[4/5] max-w-md overflow-hidden rounded-lg shadow-premium">

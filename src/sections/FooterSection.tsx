@@ -12,11 +12,11 @@ export function FooterSection() {
       </div>
       <Container className="relative z-10 py-24 text-center sm:py-32">
         <MotionReveal>
-          <p className="mx-auto max-w-2xl text-2xl leading-9 text-ivory/84">
+          <p className="mx-auto max-w-2xl text-base leading-6 text-ivory/84 sm:text-[32px] sm:leading-none">
             Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
           </p>
-          <h2 className="mt-10 font-script text-7xl leading-none text-ivory">{wedding.coupleNames}</h2>
-          <p className="mt-6 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-gold">Terima kasih</p>
+          <h2 className="mt-10 font-script text-[57px] font-normal leading-none text-ivory sm:text-[71px]">{wedding.coupleNames}</h2>
+          <p className="mt-6 font-sans text-xs font-semibold uppercase tracking-[0.21em] text-gold sm:text-[15px]">Terima kasih</p>
         </MotionReveal>
       </Container>
     </footer>

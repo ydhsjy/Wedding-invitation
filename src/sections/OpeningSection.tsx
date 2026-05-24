@@ -32,21 +32,21 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <div>
-          <p className="font-sans text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-gold">The Wedding of</p>
-          <h1 className="mt-4 font-script text-7xl leading-none">{wedding.coupleNames}</h1>
-          <p className="mt-3 font-sans text-xs uppercase tracking-[0.22em] text-ivory/75">{wedding.dateLabel}</p>
+          <p className="font-sans text-xs font-semibold uppercase tracking-[0.21em] text-gold">The Wedding of</p>
+          <h1 className="mt-4 font-script text-[57px] font-normal leading-none">{wedding.coupleNames}</h1>
+          <p className="mt-3 font-sans text-sm font-semibold uppercase tracking-[0.21em] text-ivory/75">{wedding.dateLabel}</p>
         </div>
 
         <div className="mx-auto w-full rounded-lg border border-ivory/24 bg-ivory/10 p-6 backdrop-blur-md">
-          <p className="text-xl text-ivory/80">Dear,</p>
-          <p className="mt-2 font-serif text-3xl font-semibold leading-tight">{guestName}</p>
-          <p className="mt-2 font-sans text-xs uppercase tracking-[0.24em] text-gold">You are invited</p>
+          <p className="text-base text-ivory/80">Dear,</p>
+          <p className="mt-2 font-serif text-[25px] font-semibold leading-none">{guestName}</p>
+          <p className="mt-2 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-gold">You are invited</p>
         </div>
 
         <button
           type="button"
           onClick={onOpen}
-          className="mx-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-ivory px-7 font-sans text-sm font-semibold uppercase tracking-[0.16em] text-ink shadow-premium transition hover:bg-gold hover:text-ivory"
+          className="mx-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-ivory px-7 font-button text-[15px] font-bold tracking-normal text-ink shadow-premium transition hover:bg-gold hover:text-ivory"
         >
           <MailOpen className="h-4 w-4" aria-hidden="true" />
           Open Invitation

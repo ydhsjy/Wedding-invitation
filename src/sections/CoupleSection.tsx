@@ -28,9 +28,9 @@ export function CoupleSection() {
                   </div>
                 </div>
                 <div className="relative z-10 mt-6 text-center sm:mt-0 sm:px-3">
-                  <p className="font-sans text-[0.64rem] font-semibold uppercase tracking-[0.22em] text-clay">{person.role}</p>
-                  <h3 className="mt-3 font-serif text-3xl font-bold leading-[0.95] text-ink sm:text-4xl">{person.name}</h3>
-                  <p className="mx-auto mt-5 max-w-sm text-2xl leading-9 text-clay">{person.parents}</p>
+                  <p className="font-sans text-xs font-semibold uppercase tracking-[0.21em] text-clay">{person.role}</p>
+                  <h3 className="mt-3 font-serif text-[25px] font-semibold leading-none text-ink sm:text-[32px]">{person.name}</h3>
+                  <p className="mx-auto mt-5 max-w-sm text-[15px] leading-[21px] text-clay sm:text-base sm:leading-6">{person.parents}</p>
                   <button
                     type="button"
                     className="mt-5 inline-grid h-9 w-9 place-items-center rounded-md bg-ink text-ivory shadow-soft"
@@ -40,7 +40,7 @@ export function CoupleSection() {
                   </button>
                 </div>
               </article>
-              {index === 0 ? <div className="my-1 text-center font-serif text-6xl font-semibold leading-none text-ink">&</div> : null}
+              {index === 0 ? <div className="my-1 text-center font-script text-[57px] font-normal leading-none text-ink">&</div> : null}
             </MotionReveal>
           ))}
         </div>

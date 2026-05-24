@@ -35,24 +35,24 @@ export function RSVPForm({ initialWishes }: { initialWishes: Wish[] }) {
     <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
       <form onSubmit={submit} className="luxury-card rounded-lg p-5 sm:p-7">
         <div className="grid gap-5">
-          <label className="grid gap-2 font-sans text-xs font-semibold uppercase tracking-[0.16em] text-clay">
+          <label className="grid gap-2 font-sans text-xs font-semibold uppercase tracking-[0.21em] text-clay">
             Nama
             <input
               name="name"
               required
               placeholder="Nama Anda"
-              className="rounded-md border border-gold/25 bg-ivory px-4 py-3 font-serif text-lg normal-case tracking-normal text-ink outline-none transition focus:border-gold"
+              className="rounded-md border border-gold/25 bg-ivory px-4 py-3 font-serif text-base normal-case leading-6 tracking-normal text-ink outline-none transition focus:border-gold"
             />
           </label>
           <fieldset className="grid gap-3">
-            <legend className="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-clay">Konfirmasi</legend>
+            <legend className="font-sans text-xs font-semibold uppercase tracking-[0.21em] text-clay">Konfirmasi</legend>
             <div className="grid grid-cols-2 gap-3">
               {(["Hadir", "Berhalangan"] as const).map((item) => (
                 <button
                   type="button"
                   key={item}
                   onClick={() => setStatus(item)}
-                  className={`rounded-md border px-4 py-3 font-sans text-sm font-semibold transition ${
+                  className={`rounded-md border px-4 py-3 font-button text-[15px] font-bold transition ${
                     status === item ? "border-gold bg-gold text-ivory" : "border-gold/25 bg-ivory text-ink"
                   }`}
                 >
@@ -61,18 +61,18 @@ export function RSVPForm({ initialWishes }: { initialWishes: Wish[] }) {
               ))}
             </div>
           </fieldset>
-          <label className="grid gap-2 font-sans text-xs font-semibold uppercase tracking-[0.16em] text-clay">
+          <label className="grid gap-2 font-sans text-xs font-semibold uppercase tracking-[0.21em] text-clay">
             Ucapan
             <textarea
               name="message"
               rows={5}
               placeholder="Tulis doa dan ucapan"
-              className="resize-none rounded-md border border-gold/25 bg-ivory px-4 py-3 font-serif text-lg normal-case tracking-normal text-ink outline-none transition focus:border-gold"
+              className="resize-none rounded-md border border-gold/25 bg-ivory px-4 py-3 font-serif text-base normal-case leading-6 tracking-normal text-ink outline-none transition focus:border-gold"
             />
           </label>
           <button
             type="submit"
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-ink px-6 py-3 font-sans text-sm font-semibold uppercase tracking-[0.16em] text-ivory transition hover:bg-clay"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-ink px-6 py-3 font-sans text-sm font-medium text-ivory transition hover:bg-clay"
           >
             <Send className="h-4 w-4" aria-hidden="true" />
             Kirim Ucapan

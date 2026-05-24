@@ -12,9 +12,14 @@ const config: Config = {
         ivory: "#FFFDF8"
       },
       fontFamily: {
-        script: ["var(--font-great-vibes)", "cursive"],
-        serif: ["var(--font-cormorant)", "serif"],
-        sans: ["var(--font-poppins)", "sans-serif"]
+        script: ["var(--font-pinyon-script)", "cursive"],
+        serif: ["var(--font-eb-garamond)", "serif"],
+        sans: ["var(--font-playfair-display)", "serif"],
+        button: ["var(--font-quattrocento)", "serif"],
+        gift: ["var(--font-bellefair)", "serif"],
+        countdown: ["var(--font-shippori-mincho)", "serif"],
+        decorative: ["var(--font-cinzel-decorative)", "serif"],
+        nav: ["var(--font-crete-round)", "serif"]
       },
       boxShadow: {
         premium: "0 24px 70px rgba(43, 43, 43, 0.12)",
