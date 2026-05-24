@@ -32,7 +32,7 @@ export function EventSection() {
                     sizes="108px"
                     className="mb-6 h-16 w-20 object-contain opacity-70 blur-[0.25px] sm:h-20 sm:w-24"
                   />
-                  <h3 className="max-w-[18rem] break-words font-serif text-[38px] font-normal uppercase leading-[0.98] tracking-[0.04em] text-ink sm:text-[46px] lg:text-[54px]">
+                  <h3 className="max-w-[18rem] break-words font-serif text-[34px] font-normal uppercase leading-[0.98] tracking-[0.04em] text-ink sm:text-[42px] lg:text-[50px]">
                     {event.title}
                   </h3>
                   <div className="mt-6 h-px w-full max-w-[17rem] bg-ink/65 sm:max-w-[20rem]" />

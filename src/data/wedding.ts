@@ -65,21 +65,21 @@ export const wedding = {
     {
       role: "Mempelai Wanita",
       name: "Arnalda Janssencia Lopes",
-      parents: "Putri dari Bapak Kristovao Lopes & Ibu Fin Thani",
+      parents: "Putri kedua dari Bapak Kristovao Lopes & Ibu Josefa Adolfina Thani",
       image: assetPath("/assets/Bride.jpeg"),
       background: assetPath("/assets/bg%20bride.jpg")
     },
     {
       role: "Mempelai Pria",
       name: "Albertus Yudha Sanjaya",
-      parents: "Putra dari Bapak Budiharso & Ibu Waldetrudis",
+      parents: "Putra kedua dari Bapak Budiharso & Ibu Waldetrudis",
       image: assetPath("/assets/Groom.jpg"),
       background: assetPath("/assets/bg%20groom.jpg")
     }
   ] satisfies Couple[],
   events: [
     {
-      title: "Pemberkatan Nikah",
+      title: "Pemberkatan",
       date: "Jumat, 26 Juni 2026",
       time: "11.00 WIB - selesai",
       venue: "Gereja Paroki St. Gregorius Agung Oeleta",

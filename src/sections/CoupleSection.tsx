@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Camera } from "lucide-react";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -31,13 +30,6 @@ export function CoupleSection() {
                   <p className="font-sans text-xs font-semibold uppercase tracking-[0.21em] text-clay">{person.role}</p>
                   <h3 className="mt-3 font-serif text-[25px] font-semibold leading-none text-ink sm:text-[32px]">{person.name}</h3>
                   <p className="mx-auto mt-5 max-w-sm text-[15px] leading-[21px] text-clay sm:text-base sm:leading-6">{person.parents}</p>
-                  <button
-                    type="button"
-                    className="mt-5 inline-grid h-9 w-9 place-items-center rounded-md bg-ink text-ivory shadow-soft"
-                    aria-label={`Instagram ${person.name}`}
-                  >
-                    <Camera className="h-5 w-5" aria-hidden="true" />
-                  </button>
                 </div>
               </article>
               {index === 0 ? <div className="my-1 text-center font-script text-[57px] font-normal leading-none text-ink">&</div> : null}
