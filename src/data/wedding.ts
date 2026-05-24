@@ -73,7 +73,7 @@ export const wedding = {
       role: "Mempelai Pria",
       name: "Albertus Yudha Sanjaya",
       parents: "Putra dari Bapak Budiharso & Ibu Waldetrudis",
-      image: assetPath("/assets/Groom.jpeg"),
+      image: assetPath("/assets/Groom.jpg"),
       background: assetPath("/assets/bg%20groom.jpg")
     }
   ] satisfies Couple[],

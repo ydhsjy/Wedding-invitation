@@ -2,30 +2,56 @@
 
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion, type PanInfo } from "framer-motion";
+import { useRef, useState } from "react";
 
 export function GallerySlider({ images }: { images: string[] }) {
   const [active, setActive] = useState(0);
   const [preview, setPreview] = useState<string | null>(null);
+  const didDrag = useRef(false);
 
   const move = (direction: number) => {
     setActive((current) => (current + direction + images.length) % images.length);
   };
 
+  const onDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    if (info.offset.x < -60 || info.velocity.x < -400) {
+      move(1);
+    }
+
+    if (info.offset.x > 60 || info.velocity.x > 400) {
+      move(-1);
+    }
+
+    window.setTimeout(() => {
+      didDrag.current = false;
+    }, 0);
+  };
+
   return (
     <div className="relative">
-      <div className="overflow-hidden rounded-lg">
+      <div className="overflow-hidden rounded-lg touch-pan-y">
         <motion.div
-          className="flex"
+          className="flex cursor-grab active:cursor-grabbing"
           animate={{ x: `-${active * 100}%` }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.16}
+          onDragStart={() => {
+            didDrag.current = true;
+          }}
+          onDragEnd={onDragEnd}
         >
           {images.map((image, index) => (
             <button
               type="button"
               key={image}
-              onClick={() => setPreview(image)}
+              onClick={() => {
+                if (!didDrag.current) {
+                  setPreview(image);
+                }
+              }}
               className="relative h-[70vh] min-h-[460px] w-full shrink-0 overflow-hidden bg-ink text-left"
               aria-label={`Buka foto galeri ${index + 1}`}
             >
