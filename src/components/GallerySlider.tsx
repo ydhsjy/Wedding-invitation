@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 import { motion, type PanInfo } from "framer-motion";
 import { useState } from "react";
 
@@ -52,7 +53,16 @@ export function GallerySlider({ images }: { images: string[] }) {
         </motion.div>
       </div>
 
-      <div className="mt-4 flex justify-center gap-2">
+      <button
+        type="button"
+        onClick={() => move(1)}
+        className="absolute right-4 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-ivory/88 text-ink shadow-soft backdrop-blur transition hover:bg-gold hover:text-ivory"
+        aria-label="Foto berikutnya"
+      >
+        <ChevronRight className="h-5 w-5" aria-hidden="true" />
+      </button>
+
+      <div className="mt-4 flex flex-wrap justify-center gap-1.5">
         {images.map((image, index) => (
           <span
             key={image}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowDown } from "lucide-react";
 import { wedding } from "@/data/wedding";
 
 export function DesktopScene() {
@@ -13,8 +14,11 @@ export function DesktopScene() {
           <h1 className="mt-5 font-script text-[71px] font-normal leading-none xl:text-[77px]">Yudha &<br />Alda</h1>
           <p className="mt-6 font-sans text-[21px] font-semibold uppercase tracking-[0.21em]">{wedding.dateLabel}</p>
           <div className="mt-12 h-px w-36 bg-ivory/34" />
-          <p className="mt-7 font-serif text-base font-medium text-ivory/82">Scroll ke bawah</p>
         </div>
+      </div>
+      <div className="absolute bottom-10 right-12 z-10 flex items-center gap-3 text-ivory/82 xl:right-16">
+        <p className="font-serif text-base font-medium">Scroll ke bawah</p>
+        <ArrowDown className="h-5 w-5 animate-bounce" aria-hidden="true" />
       </div>
     </aside>
   );

@@ -20,17 +20,17 @@ export function EventSection() {
           {wedding.events.map((event, index) => (
             <MotionReveal key={event.title} delay={index * 0.12}>
               <article className="relative mx-auto min-h-[30rem] w-full max-w-[21.25rem] overflow-hidden rounded-[2rem] bg-[#F7F1EA] px-5 py-8 text-center text-ink shadow-[0_20px_45px_rgba(74,56,46,0.16)] sm:max-w-[24rem] sm:px-7 sm:py-9 lg:min-h-[35rem] lg:max-w-none lg:rounded-[2.75rem] lg:px-9 lg:py-10">
-                <div className="pointer-events-none absolute inset-x-0 top-[-2rem] flex justify-center opacity-[0.12] blur-[0.75px]">
-                  <Image src={event.image} alt="" width={150} height={118} className="h-24 w-28 object-contain sm:h-28 sm:w-32" />
+                <div className="pointer-events-none absolute inset-x-0 top-[-5rem] flex justify-center opacity-[0.12] blur-[0.75px]">
+                  <Image src={event.image} alt="" width={450} height={354} className="h-72 w-80 object-contain sm:h-80 sm:w-96" />
                 </div>
                 <div className="relative z-10 mx-auto flex min-h-[26rem] max-w-[19rem] flex-col items-center justify-center lg:min-h-[31rem] lg:max-w-md">
                   <Image
                     src={event.image}
                     alt=""
-                    width={108}
-                    height={92}
-                    sizes="108px"
-                    className="mb-6 h-16 w-20 object-contain opacity-70 blur-[0.25px] sm:h-20 sm:w-24"
+                    width={324}
+                    height={276}
+                    sizes="(max-width: 768px) 240px, 288px"
+                    className="mb-2 h-48 w-60 object-contain opacity-70 blur-[0.25px] sm:h-60 sm:w-72"
                   />
                   <h3 className="max-w-[18rem] break-words font-serif text-[34px] font-normal uppercase leading-[0.98] tracking-[0.04em] text-ink sm:text-[42px] lg:text-[50px]">
                     {event.title}

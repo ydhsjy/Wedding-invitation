@@ -55,9 +55,10 @@ export const wedding = {
       assetPath("/assets/Slide8.jpg")
     ],
     opening: assetPath("/assets/awal.jpeg"),
-    desktop: assetPath("/assets/utama%20kiri.jpeg"),
+    desktop: assetPath("/assets/Desktop.jpeg"),
     hero: assetPath("/assets/kanan%20awal.jpeg"),
     quote: assetPath("/assets/bg1.jpeg"),
+    countdown: assetPath("/assets/bg%20all.jpeg"),
     marriageQuote: assetPath("/assets/quote.jpeg"),
     closing: assetPath("/assets/ending.jpeg")
   },
@@ -100,12 +101,24 @@ export const wedding = {
   gallery: [
     assetPath("/assets/gallery-1.jpeg"),
     assetPath("/assets/gallery-2.jpeg"),
-    assetPath("/assets/gallery3.jpeg"),
+    assetPath("/assets/gallery-3.jpeg"),
     assetPath("/assets/gallery-4.jpeg"),
     assetPath("/assets/gallery-5.jpeg"),
     assetPath("/assets/gallery-6.jpeg"),
     assetPath("/assets/gallery-7.jpeg"),
-    assetPath("/assets/gallery-8.jpeg")
+    assetPath("/assets/gallery-8.jpeg"),
+    assetPath("/assets/gallery-9.jpeg"),
+    assetPath("/assets/gallery-10.jpeg"),
+    assetPath("/assets/gallery-11.jpeg"),
+    assetPath("/assets/gallery-12.jpeg"),
+    assetPath("/assets/gallery-13.jpeg"),
+    assetPath("/assets/gallery-14.jpeg"),
+    assetPath("/assets/gallery-15.jpeg"),
+    assetPath("/assets/gallery-16.jpeg"),
+    assetPath("/assets/gallery-17.jpeg"),
+    assetPath("/assets/gallery-18.jpeg"),
+    assetPath("/assets/gallery-19.jpeg"),
+    assetPath("/assets/gallery-20.jpeg")
   ],
   stories: [
     {
