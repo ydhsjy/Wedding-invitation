@@ -1,12 +1,11 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
-import { ParallaxSection } from "@/components/ParallaxSection";
 import { wedding } from "@/data/wedding";
 
 export function FooterSection() {
   return (
-    <ParallaxSection as="footer" className="relative overflow-hidden bg-ink text-ivory" distance={26}>
+    <footer className="relative overflow-hidden bg-ink text-ivory">
       <div className="absolute inset-0">
         <Image src={wedding.images.closing} alt="" fill sizes="100vw" className="object-cover opacity-[0.36]" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/68 to-ink/92" />
@@ -20,6 +19,6 @@ export function FooterSection() {
           <p className="mt-6 font-sans text-xs font-semibold uppercase tracking-[0.21em] text-gold sm:text-[15px] lg:text-[8px]">Terima kasih</p>
         </MotionReveal>
       </Container>
-    </ParallaxSection>
+    </footer>
   );
 }

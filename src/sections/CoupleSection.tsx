@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
-import { ParallaxSection } from "@/components/ParallaxSection";
+import { PhotoPop } from "@/components/PhotoPop";
 import { SectionTitle } from "@/components/SectionTitle";
 import { wedding } from "@/data/wedding";
 
 export function CoupleSection() {
   return (
-    <ParallaxSection id="couple" className="section-band bg-paper">
+    <section id="couple" className="section-band bg-paper">
       <Container>
         <MotionReveal>
           <SectionTitle
@@ -23,9 +23,9 @@ export function CoupleSection() {
               <article className="relative grid min-h-[18rem] overflow-hidden rounded-[1.75rem] bg-[#f4f1ec] p-5 shadow-soft sm:grid-cols-[0.9fr_1.1fr] sm:items-center sm:p-7">
                 <Image src={person.background} alt="" fill sizes="(max-width: 768px) 95vw, 760px" className="scale-105 object-cover opacity-35 blur-[2px]" />
                 <div className="relative z-10 mx-auto w-full max-w-[16rem] sm:max-w-[18rem]">
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-[52%_48%_47%_53%/42%_43%_57%_58%] bg-ivory shadow-soft">
+                  <PhotoPop className="relative aspect-[3/4] overflow-hidden rounded-[52%_48%_47%_53%/42%_43%_57%_58%] bg-ivory shadow-soft" delay={0.1}>
                     <Image src={person.image} alt={person.name} fill sizes="(max-width: 768px) 70vw, 260px" className="object-cover object-top" />
-                  </div>
+                  </PhotoPop>
                 </div>
                 <div className="relative z-10 mt-6 text-center sm:mt-0 sm:px-3">
                   <p className="font-sans text-xs font-semibold uppercase tracking-[0.21em] text-clay lg:text-[6px]">{person.role}</p>
@@ -38,6 +38,6 @@ export function CoupleSection() {
           ))}
         </div>
       </Container>
-    </ParallaxSection>
+    </section>
   );
 }
