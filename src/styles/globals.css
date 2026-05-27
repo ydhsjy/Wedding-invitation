@@ -5,14 +5,15 @@
 :root {
   color-scheme: light;
   background: #f8f5f0;
-  --font-pinyon-script: "Palatino Linotype", "Book Antiqua", cursive;
-  --font-eb-garamond: Georgia, "Times New Roman", serif;
-  --font-playfair-display: Georgia, "Times New Roman", serif;
-  --font-quattrocento: Georgia, "Times New Roman", serif;
-  --font-bellefair: Georgia, "Times New Roman", serif;
-  --font-shippori-mincho: Georgia, "Times New Roman", serif;
-  --font-cinzel-decorative: Georgia, "Times New Roman", serif;
-  --font-crete-round: Georgia, "Times New Roman", serif;
+  --font-sophia: "Sophia", "Sophia Pro", Georgia, "Times New Roman", serif;
+  --font-pinyon-script: var(--font-sophia);
+  --font-eb-garamond: var(--font-sophia);
+  --font-playfair-display: var(--font-sophia);
+  --font-quattrocento: var(--font-sophia);
+  --font-bellefair: var(--font-sophia);
+  --font-shippori-mincho: var(--font-sophia);
+  --font-cinzel-decorative: var(--font-sophia);
+  --font-crete-round: var(--font-sophia);
 }
 
 * {
@@ -28,7 +29,7 @@ body {
   min-height: 100vh;
   color: #2b2b2b;
   background: #1d1c1a;
-  font-family: var(--font-eb-garamond), serif;
+  font-family: var(--font-sophia);
   letter-spacing: 0;
 }
 
