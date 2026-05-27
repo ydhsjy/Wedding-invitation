@@ -19,7 +19,8 @@ const config: Config = {
         gift: ["var(--font-bellefair)", "serif"],
         countdown: ["var(--font-shippori-mincho)", "serif"],
         decorative: ["var(--font-cinzel-decorative)", "serif"],
-        nav: ["var(--font-crete-round)", "serif"]
+        nav: ["var(--font-crete-round)", "serif"],
+        quote: ["var(--font-allura)", "cursive"]
       },
       boxShadow: {
         premium: "0 24px 70px rgba(43, 43, 43, 0.12)",

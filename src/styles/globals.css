@@ -1,4 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/sophia");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +9,9 @@
   color-scheme: light;
   background: #f8f5f0;
   --font-sophia: "Sophia", "Sophia Pro", Georgia, "Times New Roman", serif;
-  --font-pinyon-script: var(--font-sophia);
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-allura: "Allura", cursive;
+  --font-pinyon-script: var(--font-great-vibes);
   --font-eb-garamond: var(--font-sophia);
   --font-playfair-display: var(--font-sophia);
   --font-quattrocento: var(--font-sophia);
