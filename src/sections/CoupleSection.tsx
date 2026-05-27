@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { SectionTitle } from "@/components/SectionTitle";
 import { wedding } from "@/data/wedding";
 
 export function CoupleSection() {
   return (
-    <section id="couple" className="section-band bg-paper">
+    <ParallaxSection id="couple" className="section-band bg-paper">
       <Container>
         <MotionReveal>
           <SectionTitle
@@ -37,6 +38,6 @@ export function CoupleSection() {
           ))}
         </div>
       </Container>
-    </section>
+    </ParallaxSection>
   );
 }

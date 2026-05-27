@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { wedding } from "@/data/wedding";
 
 export function MarriageQuoteSection() {
   return (
-    <section className="section-band bg-[#EEE5DA]">
+    <ParallaxSection className="section-band bg-[#EEE5DA]">
       <Container>
         <MotionReveal className="mx-auto max-w-3xl text-center">
           <p className="font-script text-[45px] font-normal leading-none text-ink sm:text-[65px] lg:text-[33px]">Marriage is a beautiful art</p>
@@ -17,6 +18,6 @@ export function MarriageQuoteSection() {
           </div>
         </MotionReveal>
       </Container>
-    </section>
+    </ParallaxSection>
   );
 }

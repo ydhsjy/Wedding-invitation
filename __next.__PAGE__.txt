@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[36984,["/Wedding-invitation/_next/static/chunks/0fsi8lw5utejl.js","/Wedding-invitation/_next/static/chunks/0d3tkj33oycf2.js","/Wedding-invitation/_next/static/chunks/0e-_147shm-_b.js"],"InvitationExperience"]
+2:I[36984,["/Wedding-invitation/_next/static/chunks/0fsi8lw5utejl.js","/Wedding-invitation/_next/static/chunks/0d3tkj33oycf2.js","/Wedding-invitation/_next/static/chunks/14-~8wqij6aal.js"],"InvitationExperience"]
 3:I[97367,["/Wedding-invitation/_next/static/chunks/0fsi8lw5utejl.js","/Wedding-invitation/_next/static/chunks/0d3tkj33oycf2.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/Wedding-invitation/_next/static/chunks/0e-_147shm-_b.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Wkq2ba8NX8O8E-QguKH4T"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/Wedding-invitation/_next/static/chunks/14-~8wqij6aal.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"PvqwL4QH-hiKzWMeGKOqF"}
 5:null

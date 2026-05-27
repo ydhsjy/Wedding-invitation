@@ -1,11 +1,12 @@
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { RSVPForm } from "@/components/RSVPForm";
 import { wedding } from "@/data/wedding";
 
 export function RSVPSection() {
   return (
-    <section id="rsvp" className="section-band bg-[#EEE5DA]">
+    <ParallaxSection id="rsvp" className="section-band bg-[#EEE5DA]">
       <Container>
         <MotionReveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -20,6 +21,6 @@ export function RSVPSection() {
           <RSVPForm initialWishes={wedding.wishes} />
         </MotionReveal>
       </Container>
-    </section>
+    </ParallaxSection>
   );
 }

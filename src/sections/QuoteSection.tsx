@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { wedding } from "@/data/wedding";
 
 export function QuoteSection() {
   return (
-    <section className="section-band bg-paper text-ink">
+    <ParallaxSection className="section-band bg-paper text-ink">
       <Container className="relative z-10">
         <MotionReveal className="mx-auto max-w-3xl text-center">
           <div className="mx-auto mb-8 h-px w-24 bg-gold" />
@@ -16,6 +17,6 @@ export function QuoteSection() {
           </div>
         </MotionReveal>
       </Container>
-    </section>
+    </ParallaxSection>
   );
 }

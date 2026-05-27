@@ -2,12 +2,13 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { SectionTitle } from "@/components/SectionTitle";
 import { wedding } from "@/data/wedding";
 
 export function EventSection() {
   return (
-    <section id="event" className="section-band bg-paper">
+    <ParallaxSection id="event" className="section-band bg-paper">
       <Container>
         <MotionReveal>
           <SectionTitle
@@ -55,6 +56,6 @@ export function EventSection() {
           ))}
         </div>
       </Container>
-    </section>
+    </ParallaxSection>
   );
 }

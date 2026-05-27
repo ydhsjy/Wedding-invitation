@@ -4,6 +4,7 @@ import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { SectionTitle } from "@/components/SectionTitle";
 import { wedding } from "@/data/wedding";
 
@@ -19,7 +20,7 @@ export function GiftSection() {
   };
 
   return (
-    <section id="gift" className="section-band bg-paper">
+    <ParallaxSection id="gift" className="section-band bg-paper">
       <Container>
         <MotionReveal>
           <SectionTitle
@@ -44,6 +45,6 @@ export function GiftSection() {
           </div>
         </MotionReveal>
       </Container>
-    </section>
+    </ParallaxSection>
   );
 }

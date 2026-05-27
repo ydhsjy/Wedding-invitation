@@ -3,6 +3,7 @@
 import { CountdownCard } from "@/components/CountdownCard";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { SectionTitle } from "@/components/SectionTitle";
 import { wedding } from "@/data/wedding";
 import { useCountdown } from "@/hooks/useCountdown";
@@ -11,7 +12,7 @@ export function CountdownSection() {
   const time = useCountdown(wedding.isoDate);
 
   return (
-    <section className="section-band bg-paper">
+    <ParallaxSection className="section-band bg-paper">
       <Container>
         <MotionReveal>
           <SectionTitle eyebrow="Menuju Hari Bahagia" title="Save The Date" />
@@ -31,6 +32,6 @@ export function CountdownSection() {
           </div>
         </MotionReveal>
       </Container>
-    </section>
+    </ParallaxSection>
   );
 }

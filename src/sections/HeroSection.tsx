@@ -11,6 +11,7 @@ export function HeroSection() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 900], [0, 160]);
   const scale = useTransform(scrollY, [0, 900], [1.01, 1.08]);
+  const contentY = useTransform(scrollY, [0, 900], [0, -72]);
   const currentSlide = slides[slideIndex];
 
   useEffect(() => {
@@ -52,7 +53,7 @@ export function HeroSection() {
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-ink/0 via-ink/8 to-ink/60" />
       <div className="pointer-events-none absolute inset-x-0 bottom-[-1px] z-10 h-28 bg-paper [clip-path:ellipse(75%_58%_at_50%_100%)]" />
-      <div className="relative z-20 mx-auto flex min-h-svh max-w-6xl flex-col items-center justify-end px-5 pb-20 pt-28 text-center sm:px-8 lg:px-10 lg:pb-24">
+      <motion.div className="relative z-20 mx-auto flex min-h-svh max-w-6xl flex-col items-center justify-end px-5 pb-20 pt-28 text-center sm:px-8 lg:px-10 lg:pb-24" style={{ y: contentY }}>
         <motion.p
           className="font-sans text-xs font-semibold uppercase leading-none tracking-[0.21em] text-ivory/92 sm:text-[15px] lg:text-[8px]"
           initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
@@ -80,7 +81,7 @@ export function HeroSection() {
         >
           26.06.2026
         </motion.p>
-      </div>
+      </motion.div>
     </section>
   );
 }

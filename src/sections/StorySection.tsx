@@ -1,12 +1,13 @@
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { SectionTitle } from "@/components/SectionTitle";
 import { TimelineItem } from "@/components/TimelineItem";
 import { wedding } from "@/data/wedding";
 
 export function StorySection() {
   return (
-    <section id="story" className="section-band bg-paper">
+    <ParallaxSection id="story" className="section-band bg-paper">
       <Container>
         <MotionReveal>
           <SectionTitle eyebrow="Love Story" title="Our Journey" />
@@ -17,6 +18,6 @@ export function StorySection() {
           ))}
         </div>
       </Container>
-    </section>
+    </ParallaxSection>
   );
 }
