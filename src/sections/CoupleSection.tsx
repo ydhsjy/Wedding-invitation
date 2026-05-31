@@ -27,7 +27,7 @@ export function CoupleSection() {
                   <PhotoPop className="relative aspect-[3/4] overflow-hidden rounded-[52%_48%_47%_53%/42%_43%_57%_58%] bg-ivory shadow-soft" delay={0.1}>
                     <Image src={person.image} alt={person.name} fill sizes="(max-width: 768px) 70vw, 260px" className="object-cover object-top" />
                   </PhotoPop>
-                  <div className="mx-auto mt-4 w-fit border-b border-clay/70 px-5 pb-1 font-script text-[40px] font-normal leading-none text-clay sm:text-[48px] lg:text-[24px]">
+                  <div className="nickname-titlecase mx-auto mt-4 w-fit border-b border-clay/70 px-5 pb-1 text-[42px] font-normal leading-none text-clay sm:text-[52px] lg:text-[26px]">
                     {person.nickname}
                   </div>
                 </div>

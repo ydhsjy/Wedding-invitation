@@ -84,6 +84,16 @@ a {
   text-transform: uppercase;
 }
 
+.nickname-titlecase {
+  font-family: var(--font-allura);
+  text-transform: none;
+  font-variant-caps: normal;
+}
+
+.nickname-titlecase::first-letter {
+  text-transform: uppercase;
+}
+
 .luxury-card {
   border: 1px solid rgba(198, 169, 105, 0.32);
   background: rgba(255, 253, 248, 0.7);
