@@ -35,7 +35,7 @@ export const wedding = {
   coupleNames: "Yudha & Alda",
   groomFirstName: "Yudha",
   brideFirstName: "Alda",
-  dateLabel: "Jumat, 26 juni 2026",
+  dateLabel: "Jumat, 26 Juni 2026",
   isoDate: "2026-06-26T11:00:00+07:00",
   location: "Kupang, Nusa Tenggara Timur",
   quote:
@@ -59,6 +59,7 @@ export const wedding = {
     desktop: assetPath("/assets/Desktop.jpeg"),
     hero: assetPath("/assets/kanan%20awal.jpeg"),
     quote: assetPath("/assets/bg1.jpeg"),
+    quoteFrame: assetPath("/assets/bg%20frame.jpg"),
     countdown: assetPath("/assets/bg%20quote.jpg"),
     marriageQuote: assetPath("/assets/quote.jpeg"),
     closing: assetPath("/assets/ending.jpeg")
@@ -84,7 +85,7 @@ export const wedding = {
   events: [
     {
       title: "Pemberkatan",
-      date: "Jumat, 26 juni 2026",
+      date: "Jumat, 26 Juni 2026",
       time: "11.00 WITA - selesai",
       venue: "Gereja Paroki St. Gregorius Agung Oeleta",
       address: "Oeleta, Kota Kupang",
@@ -93,7 +94,7 @@ export const wedding = {
     },
     {
       title: "Resepsi",
-      date: "Jumat, 26 juni 2026",
+      date: "Jumat, 26 Juni 2026",
       time: "18.00 WITA - selesai",
       venue: "Subasuka Paradise",
       address: "Jl. Terusan Timor Raya No.126, Klp. Lima, Kota Kupang",
