@@ -104,7 +104,7 @@ export function GallerySlider({ images }: { images: string[] }) {
             type="button"
             key={image}
             onClick={() => openPreview(index)}
-            className="group relative h-[214px] overflow-hidden bg-ink text-left focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-ink sm:h-[167px]"
+            className="group relative aspect-[3/4] max-h-[44svh] overflow-hidden bg-ink text-left focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-ink sm:aspect-square sm:max-h-none"
             aria-label={`Perbesar foto galeri ${index + 1}`}
           >
             <Image
@@ -134,10 +134,7 @@ export function GallerySlider({ images }: { images: string[] }) {
           onDragEnd={onDragEnd}
         >
           {sliderImages.map((image, index) => (
-            <div
-              key={image}
-              className="relative h-[70vh] min-h-[460px] w-full shrink-0 overflow-hidden bg-ink"
-            >
+            <div key={image} className="relative h-[68svh] max-h-[560px] min-h-[320px] w-full shrink-0 overflow-hidden bg-ink sm:min-h-[460px]">
               <Image
                 src={image}
                 alt={`Galeri pernikahan ${index + 5}`}
@@ -181,15 +178,15 @@ export function GallerySlider({ images }: { images: string[] }) {
       </div>
 
       {previewImage ? (
-        <div ref={modalRef} className="fixed inset-0 z-[70] grid place-items-center bg-black p-0 text-ivory" role="dialog" aria-modal="true">
+        <div ref={modalRef} className="fixed inset-0 z-[70] h-svh w-screen overflow-hidden bg-black text-ivory" role="dialog" aria-modal="true">
           <div className="absolute left-3 top-3 z-20 rounded-full bg-black/45 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-ivory/85 backdrop-blur sm:left-5 sm:top-5">
             {previewCounter} / {featuredImages.length}
           </div>
-          <div className="absolute right-3 top-3 z-20 flex items-center gap-2 sm:right-5 sm:top-5">
+          <div className="absolute right-3 top-3 z-20 flex items-center gap-1.5 sm:right-5 sm:top-5 sm:gap-2">
             <button
               type="button"
               onClick={() => setZoomScale((current) => Math.max(1, current - 0.25))}
-              className="grid h-11 w-11 place-items-center rounded-full bg-black/45 text-ivory shadow-soft backdrop-blur transition hover:bg-ivory hover:text-ink"
+              className="grid h-10 w-10 place-items-center rounded-full bg-black/45 text-ivory shadow-soft backdrop-blur transition hover:bg-ivory hover:text-ink sm:h-11 sm:w-11"
               aria-label="Perkecil foto"
             >
               <ZoomOut className="h-5 w-5" aria-hidden="true" />
@@ -197,7 +194,7 @@ export function GallerySlider({ images }: { images: string[] }) {
             <button
               type="button"
               onClick={() => setZoomScale((current) => Math.min(2.5, current + 0.25))}
-              className="grid h-11 w-11 place-items-center rounded-full bg-black/45 text-ivory shadow-soft backdrop-blur transition hover:bg-ivory hover:text-ink"
+              className="grid h-10 w-10 place-items-center rounded-full bg-black/45 text-ivory shadow-soft backdrop-blur transition hover:bg-ivory hover:text-ink sm:h-11 sm:w-11"
               aria-label="Perbesar foto"
             >
               <ZoomIn className="h-5 w-5" aria-hidden="true" />
@@ -205,7 +202,7 @@ export function GallerySlider({ images }: { images: string[] }) {
             <button
               type="button"
               onClick={toggleFullscreen}
-              className="grid h-11 w-11 place-items-center rounded-full bg-black/45 text-ivory shadow-soft backdrop-blur transition hover:bg-ivory hover:text-ink"
+              className="grid h-10 w-10 place-items-center rounded-full bg-black/45 text-ivory shadow-soft backdrop-blur transition hover:bg-ivory hover:text-ink sm:h-11 sm:w-11"
               aria-label={isFullscreen ? "Keluar layar penuh" : "Layar penuh"}
             >
               {isFullscreen ? <Minimize2 className="h-5 w-5" aria-hidden="true" /> : <Maximize2 className="h-5 w-5" aria-hidden="true" />}
@@ -213,7 +210,7 @@ export function GallerySlider({ images }: { images: string[] }) {
             <button
               type="button"
               onClick={closePreview}
-              className="grid h-11 w-11 place-items-center rounded-full bg-black/45 text-ivory shadow-soft backdrop-blur transition hover:bg-ivory hover:text-ink"
+              className="grid h-10 w-10 place-items-center rounded-full bg-black/45 text-ivory shadow-soft backdrop-blur transition hover:bg-ivory hover:text-ink sm:h-11 sm:w-11"
               aria-label="Tutup foto"
             >
               <X className="h-5 w-5" aria-hidden="true" />
@@ -222,7 +219,7 @@ export function GallerySlider({ images }: { images: string[] }) {
           <button
             type="button"
             onClick={() => movePreview(-1)}
-            className="absolute left-3 top-1/2 z-20 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-black/38 text-ivory backdrop-blur transition hover:bg-ivory hover:text-ink sm:left-5"
+            className="absolute left-2 top-1/2 z-20 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-black/38 text-ivory backdrop-blur transition hover:bg-ivory hover:text-ink sm:left-5 sm:h-12 sm:w-12"
             aria-label="Foto preview sebelumnya"
           >
             <ChevronLeft className="h-7 w-7" aria-hidden="true" />
@@ -230,14 +227,14 @@ export function GallerySlider({ images }: { images: string[] }) {
           <button
             type="button"
             onClick={() => movePreview(1)}
-            className="absolute right-3 top-1/2 z-20 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-black/38 text-ivory backdrop-blur transition hover:bg-ivory hover:text-ink sm:right-5"
+            className="absolute right-2 top-1/2 z-20 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-black/38 text-ivory backdrop-blur transition hover:bg-ivory hover:text-ink sm:right-5 sm:h-12 sm:w-12"
             aria-label="Foto preview berikutnya"
           >
             <ChevronRight className="h-7 w-7" aria-hidden="true" />
           </button>
           <div className="absolute inset-x-0 top-0 z-10 h-24 bg-gradient-to-b from-black/75 to-transparent" aria-hidden="true" />
-          <div className="relative h-svh w-screen overflow-auto overscroll-contain">
-            <div className="relative min-h-full min-w-full" style={{ height: `${100 * zoomScale}svh`, width: `${100 * zoomScale}vw` }}>
+          <div className="absolute inset-0 z-0 flex h-svh w-screen items-center justify-center overflow-hidden px-2 py-16 sm:px-6 sm:py-20">
+            <div className="relative h-full max-h-[calc(100svh-8rem)] w-full max-w-[100vw] origin-center transition-transform duration-200 sm:max-h-[calc(100svh-10rem)]" style={{ transform: `scale(${zoomScale})` }}>
               <Image src={previewImage} alt="Foto galeri diperbesar" fill sizes="100vw" className="object-contain" priority />
             </div>
           </div>
