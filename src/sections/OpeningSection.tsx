@@ -26,7 +26,7 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
       <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/48 to-ink/82" />
       <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-ink/55 to-transparent" />
       <motion.div
-        className="relative z-10 flex min-h-svh w-full max-w-md flex-col px-6 pb-20 pt-24"
+        className="relative z-10 flex min-h-svh w-full max-w-md flex-col px-6 pb-8 pt-24 sm:pb-20"
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
