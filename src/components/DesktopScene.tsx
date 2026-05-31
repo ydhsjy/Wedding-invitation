@@ -11,7 +11,7 @@ export function DesktopScene() {
       <div className="relative z-10 flex min-h-svh items-end px-12 pb-20 xl:px-24">
         <div className="max-w-xl">
           <p className="font-sans text-[8px] font-semibold uppercase tracking-[0.21em]">The Wedding of</p>
-          <h1 className="mt-5 font-script text-[36px] font-normal leading-none xl:text-[39px]">Yudha &<br />Alda</h1>
+          <h1 className="couple-name-titlecase mt-5 font-script text-[36px] font-normal leading-none xl:text-[39px]">Yudha &<br />Alda</h1>
           <p className="mt-6 font-sans text-[11px] font-semibold tracking-[0.12em]">{wedding.dateLabel}</p>
           <div className="mt-12 h-px w-36 bg-ivory/34" />
         </div>

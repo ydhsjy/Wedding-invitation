@@ -63,7 +63,7 @@ export function HeroSection() {
           The Wedding of
         </motion.p>
         <motion.h2
-          className="mt-4 max-w-3xl font-script text-[57px] font-normal leading-none tracking-normal text-ivory sm:text-[71px] lg:text-[36px]"
+          className="couple-name-titlecase mt-4 max-w-3xl font-script text-[57px] font-normal leading-none tracking-normal text-ivory sm:text-[71px] lg:text-[36px]"
           initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}

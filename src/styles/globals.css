@@ -71,7 +71,16 @@ a {
 .section-band {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(5rem, 10vw, 7.5rem);
+  padding-block: clamp(3.5rem, 7vw, 5.25rem);
+}
+
+.couple-name-titlecase {
+  text-transform: none;
+  font-variant-caps: normal;
+}
+
+.couple-name-titlecase::first-letter {
+  text-transform: uppercase;
 }
 
 .luxury-card {
