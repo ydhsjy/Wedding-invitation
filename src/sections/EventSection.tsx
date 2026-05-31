@@ -20,9 +20,6 @@ export function EventSection() {
           {wedding.events.map((event, index) => (
             <MotionReveal key={event.title} delay={index * 0.12}>
               <article className="relative mx-auto min-h-[24rem] w-full max-w-[20rem] overflow-hidden rounded-[1.75rem] bg-[#F7F1EA] px-5 py-6 text-center text-ink shadow-[0_18px_36px_rgba(74,56,46,0.14)] sm:max-w-[23rem] sm:px-7 sm:py-7 lg:min-h-[27rem] lg:max-w-[26rem] lg:rounded-[2rem] lg:px-8 lg:py-8">
-                <div className="pointer-events-none absolute inset-x-0 top-3 flex justify-center opacity-[0.12] blur-[0.75px]">
-                  <Image src={event.image} alt="" width={260} height={220} className="h-36 w-44 object-contain sm:h-40 sm:w-52 lg:h-36 lg:w-44" />
-                </div>
                 <div className="relative z-10 mx-auto flex min-h-[21rem] max-w-[18rem] flex-col items-center justify-center lg:min-h-[23rem] lg:max-w-sm">
                   <Image
                     src={event.image}
@@ -36,15 +33,17 @@ export function EventSection() {
                     {event.title}
                   </h3>
                   <div className="mt-4 h-px w-full max-w-[16rem] bg-ink/65 sm:max-w-[18rem]" />
-                  <p className="mt-5 font-serif text-[18px] leading-7 text-ink sm:text-[19px] lg:text-[10px] lg:leading-4">{event.date}</p>
-                  <p className="mt-3 font-serif text-[18px] leading-7 text-ink sm:text-[19px] lg:text-[10px] lg:leading-4">{event.time}</p>
-                  <p className="mt-3 font-serif text-[18px] font-semibold leading-7 text-ink sm:text-[19px] lg:text-[10px] lg:leading-4">{event.venue}</p>
-                  <p className="mt-2 max-w-[17rem] font-serif text-[18px] leading-7 text-ink/88 sm:max-w-xs sm:text-[19px] lg:text-[10px] lg:leading-4">{event.address}</p>
+                  <div className="mt-5 flex min-h-[9.5rem] flex-col items-center sm:min-h-[10rem] lg:min-h-[5.5rem]">
+                    <p className="font-serif text-[18px] leading-7 text-ink sm:text-[19px] lg:text-[10px] lg:leading-4">{event.date}</p>
+                    <p className="mt-3 font-serif text-[18px] leading-7 text-ink sm:text-[19px] lg:text-[10px] lg:leading-4">{event.time}</p>
+                    <p className="mt-3 font-serif text-[18px] font-semibold leading-7 text-ink sm:text-[19px] lg:text-[10px] lg:leading-4">{event.venue}</p>
+                    <p className="mt-2 max-w-[17rem] font-serif text-[18px] leading-7 text-ink/88 sm:max-w-xs sm:text-[19px] lg:text-[10px] lg:leading-4">{event.address}</p>
+                  </div>
                   <a
                     href={event.mapUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-clay px-6 font-serif text-[17px] font-semibold text-ivory transition hover:bg-ink lg:text-[9px]"
+                    className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-full bg-clay px-6 font-serif text-[17px] font-semibold text-ivory transition hover:bg-ink lg:text-[9px]"
                   >
                     <MapPin className="h-4 w-4" aria-hidden="true" />
                     Google Maps

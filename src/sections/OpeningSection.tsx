@@ -32,7 +32,7 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <div>
-          <p className="font-sans text-xs font-semibold uppercase tracking-[0.21em] text-gold lg:text-[6px]">The Wedding of</p>
+          <p className="font-sans text-2xl font-semibold uppercase tracking-[0.21em] text-gold lg:text-xs">The Wedding of</p>
           <h1 className="mt-4 font-script text-[57px] font-normal leading-none lg:text-[29px]">{wedding.coupleNames}</h1>
           <p className="mt-3 font-sans text-sm font-semibold uppercase tracking-[0.21em] text-ivory/75 lg:text-[7px]">{wedding.dateLabel}</p>
         </div>
@@ -47,7 +47,7 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
           <button
             type="button"
             onClick={onOpen}
-            className="mx-auto mt-28 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-ivory px-7 font-button text-[15px] font-bold tracking-normal text-ink shadow-premium transition hover:bg-gold hover:text-ivory lg:text-[8px]"
+            className="mx-auto mt-36 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-ivory px-7 font-button text-[15px] font-bold tracking-normal text-ink shadow-premium transition hover:bg-gold hover:text-ivory sm:mt-28 lg:text-[8px]"
           >
             <MailOpen className="h-4 w-4" aria-hidden="true" />
             Open Invitation
