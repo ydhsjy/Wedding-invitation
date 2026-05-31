@@ -71,7 +71,7 @@ a {
 .section-band {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(3.5rem, 7vw, 5.25rem);
+  padding-block: clamp(2rem, 4.5vw, 3.25rem);
 }
 
 .couple-name-titlecase {
