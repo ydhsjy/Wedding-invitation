@@ -75,6 +75,7 @@ a {
 }
 
 .couple-name-titlecase {
+  font-family: var(--font-allura);
   text-transform: none;
   font-variant-caps: normal;
 }
