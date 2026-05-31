@@ -32,7 +32,7 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <div>
-          <p className="font-sans text-2xl font-semibold uppercase tracking-[0.21em] text-gold lg:text-xs">The Wedding of</p>
+          <p className="font-sans text-sm font-semibold uppercase tracking-[0.21em] text-gold sm:text-base lg:text-[8px]">The Wedding of</p>
           <h1 className="mt-4 font-script text-[57px] font-normal leading-none lg:text-[29px]">{wedding.coupleNames}</h1>
           <p className="mt-3 font-sans text-sm font-semibold uppercase tracking-[0.21em] text-ivory/75 lg:text-[7px]">{wedding.dateLabel}</p>
         </div>

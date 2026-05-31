@@ -16,11 +16,11 @@ export function EventSection() {
             description="Dengan kerendahan hati, kami mengharapkan kehadiran dan doa restu pada rangkaian acara berikut."
           />
         </MotionReveal>
-        <div className="mx-auto mt-8 grid max-w-4xl gap-6">
+        <div className="mx-auto mt-5 grid max-w-4xl gap-6">
           {wedding.events.map((event, index) => (
             <MotionReveal key={event.title} delay={index * 0.12}>
-              <article className="relative mx-auto min-h-[24rem] w-full max-w-[20rem] overflow-hidden rounded-[1.75rem] bg-[#F7F1EA] px-5 py-6 text-center text-ink shadow-[0_18px_36px_rgba(74,56,46,0.14)] sm:max-w-[23rem] sm:px-7 sm:py-7 lg:min-h-[27rem] lg:max-w-[26rem] lg:rounded-[2rem] lg:px-8 lg:py-8">
-                <div className="relative z-10 mx-auto flex min-h-[21rem] max-w-[18rem] flex-col items-center justify-center lg:min-h-[23rem] lg:max-w-sm">
+              <article className="relative mx-auto min-h-[24rem] w-full max-w-[20rem] overflow-hidden rounded-[1.75rem] bg-[#F7F1EA] px-5 py-5 text-center text-ink shadow-[0_18px_36px_rgba(74,56,46,0.14)] sm:max-w-[23rem] sm:px-7 sm:py-6 lg:min-h-[27rem] lg:max-w-[26rem] lg:rounded-[2rem] lg:px-8 lg:py-7">
+                <div className="relative z-10 mx-auto flex min-h-[21rem] max-w-[18rem] flex-col items-center justify-start pt-2 lg:min-h-[23rem] lg:max-w-sm lg:pt-3">
                   <Image
                     src={event.image}
                     alt=""
