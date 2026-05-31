@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
@@ -18,8 +19,16 @@ export function EventSection() {
         <div className="mx-auto mt-5 grid max-w-4xl gap-6">
           {wedding.events.map((event, index) => (
             <MotionReveal key={event.title} delay={index * 0.12}>
-              <article className="relative mx-auto min-h-[18.5rem] w-full max-w-[20rem] overflow-hidden rounded-[1.75rem] bg-[#F7F1EA] px-5 py-6 text-center text-ink shadow-[0_18px_36px_rgba(74,56,46,0.14)] sm:max-w-[23rem] sm:px-7 sm:py-7 lg:min-h-[20rem] lg:max-w-[26rem] lg:rounded-[2rem] lg:px-8 lg:py-7">
-                <div className="relative z-10 mx-auto flex min-h-[15.5rem] max-w-[18rem] flex-col items-center justify-start lg:min-h-[17rem] lg:max-w-sm">
+              <article className="relative mx-auto min-h-[21rem] w-full max-w-[20rem] overflow-hidden rounded-[1.75rem] bg-[#F7F1EA] px-5 py-5 text-center text-ink shadow-[0_18px_36px_rgba(74,56,46,0.14)] sm:max-w-[23rem] sm:px-7 sm:py-6 lg:min-h-[22rem] lg:max-w-[26rem] lg:rounded-[2rem] lg:px-8 lg:py-6">
+                <div className="relative z-10 mx-auto flex min-h-[18rem] max-w-[18rem] flex-col items-center justify-start lg:min-h-[19rem] lg:max-w-sm">
+                  <Image
+                    src={event.image}
+                    alt=""
+                    width={180}
+                    height={150}
+                    sizes="(max-width: 768px) 112px, 96px"
+                    className="mb-2 h-20 w-28 object-contain opacity-80 sm:h-24 sm:w-32 lg:h-16 lg:w-24"
+                  />
                   <h3 className="max-w-[18rem] break-words font-serif text-[34px] font-normal uppercase leading-[0.98] tracking-[0.04em] text-ink sm:text-[42px] lg:text-[25px]">
                     {event.title}
                   </h3>

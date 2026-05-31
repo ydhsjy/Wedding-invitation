@@ -91,7 +91,7 @@ export const wedding = {
       venue: "Gereja Paroki St. Gregorius Agung Oeleta",
       address: "Oeleta, Kota Kupang",
       mapUrl: "https://maps.app.goo.gl/Lizi1yNfQDGyqqXA7",
-      image: assetPath("/assets/bg2.png")
+      image: assetPath("/assets/bg%20pemberkatan.png")
     },
     {
       title: "Resepsi",
@@ -100,7 +100,7 @@ export const wedding = {
       venue: "Subasuka Paradise",
       address: "Jl. Terusan Timor Raya No.126, Klp. Lima, Kota Kupang",
       mapUrl: "https://maps.app.goo.gl/Pm9YNXRVp7oNwc8M7",
-      image: assetPath("/assets/bg3.png")
+      image: assetPath("/assets/bg%20resepsi.png")
     }
   ] satisfies WeddingEvent[],
   gallery: [

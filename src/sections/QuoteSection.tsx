@@ -20,7 +20,7 @@ export function QuoteSection() {
               <cite className="mt-8 block font-serif text-base not-italic leading-6 text-clay lg:text-[8px] lg:leading-3">{wedding.quoteSource}</cite>
             </div>
           </div>
-          <PhotoPop className="relative mx-auto mt-12 aspect-[4/5] max-w-sm overflow-hidden rounded-t-full rounded-b-lg shadow-premium" delay={0.1}>
+          <PhotoPop className="relative mx-auto mt-8 aspect-[4/5] max-w-sm overflow-hidden rounded-t-full rounded-b-lg shadow-premium sm:mt-10" delay={0.1}>
             <Image src={wedding.images.quote} alt="Yudha dan Alda" fill sizes="(max-width: 768px) 82vw, 360px" className="object-cover" />
           </PhotoPop>
         </MotionReveal>
