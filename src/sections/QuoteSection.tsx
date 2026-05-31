@@ -10,7 +10,7 @@ export function QuoteSection() {
       <Container className="relative z-10">
         <MotionReveal className="mx-auto max-w-3xl text-center">
           <div className="relative mx-auto overflow-hidden rounded-[1.5rem] px-7 py-12 shadow-soft sm:px-14 sm:py-16">
-            <Image src={wedding.images.quoteFrame} alt="" fill sizes="(max-width: 768px) 90vw, 720px" className="object-contain opacity-55 mix-blend-multiply" />
+            <Image src={wedding.images.quoteFrame} alt="" fill sizes="(max-width: 768px) 90vw, 720px" className="object-contain opacity-55" />
             <div className="relative z-10 mx-auto max-w-2xl">
               <div className="mx-auto mb-8 h-px w-24 bg-gold" />
               <blockquote className="font-serif text-[20px] italic leading-8 text-balance text-ink sm:text-[28px] sm:leading-10 lg:text-[14px] lg:leading-5">
