@@ -3,6 +3,7 @@ import { assetPath } from "@/lib/utils";
 export type Couple = {
   role: string;
   name: string;
+  nickname: string;
   parents: string;
   image: string;
   background: string;
@@ -66,6 +67,7 @@ export const wedding = {
     {
       role: "Mempelai Wanita",
       name: "Arnalda Janssencia Lopes",
+      nickname: "Alda",
       parents: "Putri kedua dari Bapak Kristovao Lopes & Ibu Josefa Adolfina Thani",
       image: assetPath("/assets/Bride.jpeg"),
       background: assetPath("/assets/bg%20bride.jpg")
@@ -73,6 +75,7 @@ export const wedding = {
     {
       role: "Mempelai Pria",
       name: "Albertus Yudha Sanjaya",
+      nickname: "Yudha",
       parents: "Putra kedua dari Bapak Budiharso & Ibu Waldetrudis",
       image: assetPath("/assets/Groom.jpg"),
       background: assetPath("/assets/bg%20groom.jpg")
@@ -82,7 +85,7 @@ export const wedding = {
     {
       title: "Pemberkatan",
       date: "Jumat, 26 Juni 2026",
-      time: "11.00 WIB - selesai",
+      time: "11.00 WITA - selesai",
       venue: "Gereja Paroki St. Gregorius Agung Oeleta",
       address: "Oeleta, Kota Kupang",
       mapUrl: "https://maps.app.goo.gl/Lizi1yNfQDGyqqXA7",

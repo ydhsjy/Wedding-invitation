@@ -38,9 +38,9 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
         </div>
 
         <div className="mt-auto">
-          <div className="mx-auto w-[82%] translate-y-20 rounded-md border border-ivory/24 bg-ivory/10 px-4 py-4 backdrop-blur-md">
+          <div className="mx-auto w-[82%] translate-y-28 rounded-md border border-ivory/24 bg-ivory/10 px-4 py-4 backdrop-blur-md sm:translate-y-20">
             <p className="text-xs text-ivory/80 lg:text-[6px]">Dear,</p>
-            <p className="mt-1.5 font-serif text-[13px] font-semibold leading-none lg:text-[7px]">{guestName}</p>
+            <p className="mt-1.5 font-serif text-[18px] font-semibold leading-none sm:text-[20px] lg:text-[9px]">{guestName}</p>
             <p className="mt-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-gold lg:text-[5px]">You are invited</p>
           </div>
 
