@@ -6,7 +6,7 @@ File aset yang dipakai undangan:
 - `bg1.jpeg` untuk background ayat/kutipan.
 - `bg2.jpeg` untuk background pemberkatan nikah.
 - `bg3.jpeg` untuk background resepsi.
-- `Groom.jpeg` untuk foto mempelai pria.
+- `Groom.jpg` untuk foto mempelai pria.
 - `Bride.jpeg` untuk foto mempelai wanita.
 - `ending.jpeg` untuk foto penutup paling terakhir.
 - `gallery-1.jpeg` sampai `gallery-6.jpeg` untuk galeri.

@@ -31,6 +31,12 @@ export type Wish = {
   message: string;
 };
 
+export type GiftAccount = {
+  bank: string;
+  account: string;
+  name: string;
+};
+
 export const wedding = {
   coupleNames: "Yudha & Alda",
   groomFirstName: "Yudha",
@@ -56,13 +62,13 @@ export const wedding = {
       assetPath("/assets/Slide8.jpg")
     ],
     opening: assetPath("/assets/awal.jpeg"),
-    desktop: assetPath("/assets/Desktop.jpeg"),
+    desktop: assetPath("/assets/Desktop.jpg"),
     hero: assetPath("/assets/kanan%20awal.jpeg"),
     quote: assetPath("/assets/bg1.jpeg"),
     quoteFrame: assetPath("/assets/bg%20frame.png"),
     quoteSecondFrame: assetPath("/assets/bg%20kutipan.png"),
     countdown: assetPath("/assets/bg%20quote.jpg"),
-    marriageQuote: assetPath("/assets/quote.jpeg"),
+    marriageQuote: assetPath("/assets/bg%20kutipan.jpg"),
     closing: assetPath("/assets/ending.jpeg")
   },
   couples: [
@@ -113,9 +119,9 @@ export const wedding = {
     assetPath("/assets/gallery-7.jpeg"),
     assetPath("/assets/gallery-8.jpeg"),
     assetPath("/assets/gallery-9.jpeg"),
-    assetPath("/assets/gallery-10.jpeg"),
-    assetPath("/assets/gallery-11.jpeg"),
-    assetPath("/assets/gallery-12.jpeg"),
+    assetPath("/assets/gallery-10.jpg"),
+    assetPath("/assets/gallery-11.jpg"),
+    assetPath("/assets/gallery-12.jpg"),
     assetPath("/assets/gallery-13.jpeg"),
     assetPath("/assets/gallery-14.jpeg"),
     assetPath("/assets/gallery-15.jpeg"),
@@ -156,7 +162,18 @@ export const wedding = {
   ] satisfies Wish[],
   gift: {
     bank: "Bank Mandiri",
-    account: "1234567890",
-    name: "Arnalda Janssencia Lopes"
+    logo: assetPath("/assets/BMRI.png"),
+    accounts: [
+      {
+        bank: "Bank Mandiri",
+        account: "1810001149096",
+        name: "Arnalda Janssencia Lopes"
+      },
+      {
+        bank: "Bank Mandiri",
+        account: "1810000568700",
+        name: "Albertus Yudha Sanjaya"
+      }
+    ] satisfies GiftAccount[]
   }
 };
