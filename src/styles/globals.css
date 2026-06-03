@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +8,7 @@
   color-scheme: light;
   background: #f8f5f0;
   --font-cormorant-garamond: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-alex-brush: "Alex Brush", cursive;
   --font-great-vibes: "Great Vibes", cursive;
   --font-allura: "Allura", cursive;
   --font-pinyon-script: var(--font-great-vibes);
@@ -75,23 +76,23 @@ a {
 }
 
 .couple-name-titlecase {
-  font-family: var(--font-pinyon-script);
-  text-transform: uppercase;
+  font-family: var(--font-alex-brush);
+  text-transform: capitalize;
   font-variant-caps: normal;
 }
 
 .couple-name-titlecase::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .nickname-titlecase {
-  font-family: var(--font-pinyon-script);
-  text-transform: uppercase;
+  font-family: var(--font-alex-brush);
+  text-transform: capitalize;
   font-variant-caps: normal;
 }
 
 .nickname-titlecase::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .luxury-card {

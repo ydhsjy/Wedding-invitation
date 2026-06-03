@@ -25,7 +25,7 @@ export function GiftSection() {
         <MotionReveal>
           <SectionTitle
             eyebrow="Wedding Gift"
-            title="Digital Gift"
+            title="Amplop Digital"
             description="Doa restu Bapak/Ibu/Saudara/i adalah hadiah terindah bagi kami. Bagi yang berkenan, tersedia amplop digital berikut."
           />
         </MotionReveal>

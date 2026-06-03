@@ -1,2 +1,2 @@
-:HL["/Wedding-invitation/_next/static/chunks/0mtug-zncez5-.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"rrYVTpZLGykMOpiwh3tIB"}
+:HL["/Wedding-invitation/_next/static/chunks/0dwodz6ht_r0b.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"-QQ6YofDtTzy9JcGKxO6M"}

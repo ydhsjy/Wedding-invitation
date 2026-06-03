@@ -8,7 +8,7 @@ File aset yang dipakai undangan:
 - `bg3.jpeg` untuk background resepsi.
 - `Groom.jpg` untuk foto mempelai pria.
 - `Bride.jpeg` untuk foto mempelai wanita.
-- `ending.jpeg` untuk foto penutup paling terakhir.
+- `Ending.jpg` untuk foto penutup paling terakhir.
 - `gallery-1.jpeg` sampai `gallery-6.jpeg` untuk galeri.
 - `assetsmusicmp3.mp3` untuk musik latar.
 

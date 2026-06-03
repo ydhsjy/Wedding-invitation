@@ -69,7 +69,7 @@ export const wedding = {
     quoteSecondFrame: assetPath("/assets/bg%20kutipan.png"),
     countdown: assetPath("/assets/bg%20quote.jpg"),
     marriageQuote: assetPath("/assets/bg%20kutipan.jpg"),
-    closing: assetPath("/assets/ending.jpeg")
+    closing: assetPath("/assets/Ending.jpg")
   },
   couples: [
     {
