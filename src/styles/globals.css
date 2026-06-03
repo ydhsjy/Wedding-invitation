@@ -76,7 +76,7 @@ a {
 
 .couple-name-titlecase {
   font-family: var(--font-pinyon-script);
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-variant-caps: normal;
 }
 
@@ -86,7 +86,7 @@ a {
 
 .nickname-titlecase {
   font-family: var(--font-pinyon-script);
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-variant-caps: normal;
 }
 
