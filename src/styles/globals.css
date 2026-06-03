@@ -75,7 +75,7 @@ a {
 }
 
 .couple-name-titlecase {
-  font-family: var(--font-bellefair);
+  font-family: var(--font-pinyon-script);
   text-transform: none;
   font-variant-caps: normal;
 }
@@ -85,7 +85,7 @@ a {
 }
 
 .nickname-titlecase {
-  font-family: var(--font-bellefair);
+  font-family: var(--font-pinyon-script);
   text-transform: none;
   font-variant-caps: normal;
 }
