@@ -66,8 +66,7 @@ export function GiftSection() {
                       </div>
                       <div className="relative z-10 mt-7 flex items-end justify-between gap-4 lg:mt-4">
                         <div>
-                          <p className="font-sans text-[9px] font-semibold uppercase tracking-[0.21em] text-ivory/58 lg:text-[5px]">Card Holder</p>
-                          <p className="mt-1 font-gift text-base leading-[1.2] text-ivory sm:text-[19px] lg:text-[10px]">{account.name}</p>
+                          <p className="font-gift text-base leading-[1.2] text-ivory sm:text-[19px] lg:text-[10px]">{account.name}</p>
                         </div>
                         <button
                           type="button"
