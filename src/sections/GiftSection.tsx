@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Check, Copy, Mail } from "lucide-react";
+import { Check, Copy, Gift, Mail } from "lucide-react";
 import { useState } from "react";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
@@ -10,7 +10,7 @@ import { wedding } from "@/data/wedding";
 
 export function GiftSection() {
   const [copiedAccount, setCopiedAccount] = useState<string | null>(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [activePanel, setActivePanel] = useState<"digital" | "present" | null>(null);
 
   const copy = async (account: string) => {
     if (navigator.clipboard) {
@@ -26,24 +26,43 @@ export function GiftSection() {
         <MotionReveal>
           <SectionTitle
             eyebrow="Wedding Gift"
-            title="Amplop Digital"
-            description="Doa restu Bapak/Ibu/Saudara/i adalah hadiah terindah bagi kami. Bagi yang berkenan, tersedia amplop digital berikut."
+            title="Wedding Gift"
+            description="Doa restu Bapak/Ibu/Saudara/i adalah hadiah terindah bagi kami. Bagi yang berkenan memberikan tanda kasih, tersedia pilihan berikut."
           />
         </MotionReveal>
         <MotionReveal className="mx-auto mt-10 max-w-md">
           <div className="text-center">
-            <button
-              type="button"
-              onClick={() => setIsOpen((current) => !current)}
-              aria-expanded={isOpen}
-              className="group mx-auto grid h-24 w-32 place-items-center rounded-lg border border-gold/35 bg-ivory/80 text-ink shadow-premium backdrop-blur transition hover:-translate-y-1 hover:border-gold hover:bg-gold sm:h-28 sm:w-40 lg:h-16 lg:w-24"
-            >
-              <span className="grid h-14 w-[4.5rem] place-items-center rounded-md border border-ink/30 bg-ink/5 transition group-hover:bg-ivory/20 sm:h-16 sm:w-20 lg:h-10 lg:w-14">
-                <Mail className="h-8 w-8 text-ink lg:h-5 lg:w-5" aria-hidden="true" />
-              </span>
-              <span className="sr-only">{isOpen ? "Tutup amplop digital" : "Buka amplop digital"}</span>
-            </button>
-            {isOpen ? (
+            <div className="grid grid-cols-2 gap-5">
+              <div>
+                <button
+                  type="button"
+                  onClick={() => setActivePanel((current) => (current === "digital" ? null : "digital"))}
+                  aria-expanded={activePanel === "digital"}
+                  className="group mx-auto grid h-24 w-24 place-items-center rounded-lg border border-gold/35 bg-ivory/80 text-ink shadow-premium backdrop-blur transition hover:-translate-y-1 hover:border-gold hover:bg-gold sm:h-28 sm:w-28 lg:h-16 lg:w-16"
+                >
+                  <span className="grid h-14 w-16 place-items-center rounded-md border border-ink/30 bg-ink/5 transition group-hover:bg-ivory/20 sm:h-16 sm:w-20 lg:h-10 lg:w-12">
+                    <Mail className="h-8 w-8 text-ink lg:h-5 lg:w-5" aria-hidden="true" />
+                  </span>
+                  <span className="sr-only">{activePanel === "digital" ? "Tutup amplop digital" : "Buka amplop digital"}</span>
+                </button>
+                <p className="mt-3 font-button text-[12px] font-bold uppercase tracking-[0.16em] text-ink sm:text-[13px] lg:text-[7px]">Amplop Digital</p>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  onClick={() => setActivePanel((current) => (current === "present" ? null : "present"))}
+                  aria-expanded={activePanel === "present"}
+                  className="group mx-auto grid h-24 w-24 place-items-center rounded-lg border border-gold/35 bg-ivory/80 text-ink shadow-premium backdrop-blur transition hover:-translate-y-1 hover:border-gold hover:bg-gold sm:h-28 sm:w-28 lg:h-16 lg:w-16"
+                >
+                  <span className="grid h-14 w-16 place-items-center rounded-md border border-ink/30 bg-ink/5 transition group-hover:bg-ivory/20 sm:h-16 sm:w-20 lg:h-10 lg:w-12">
+                    <Gift className="h-8 w-8 text-ink lg:h-5 lg:w-5" aria-hidden="true" />
+                  </span>
+                  <span className="sr-only">{activePanel === "present" ? "Tutup alamat hadiah" : "Buka alamat hadiah"}</span>
+                </button>
+                <p className="mt-3 font-button text-[12px] font-bold uppercase tracking-[0.16em] text-ink sm:text-[13px] lg:text-[7px]">Hadiah</p>
+              </div>
+            </div>
+            {activePanel === "digital" ? (
               <div className="mt-8 grid gap-5 text-left">
                 {wedding.gift.accounts.map((account) => {
                   const copied = copiedAccount === account.account;
@@ -80,6 +99,14 @@ export function GiftSection() {
                     </div>
                   );
                 })}
+              </div>
+            ) : null}
+            {activePanel === "present" ? (
+              <div className="mt-8 rounded-lg border border-gold/30 bg-ivory/82 p-6 text-left shadow-premium backdrop-blur lg:p-4">
+                <p className="font-body text-base leading-7 text-ink/82 sm:text-[17px] lg:text-[10px] lg:leading-5">
+                  Apabila Bapak/Ibu berkenan memberikan hadiah, dapat dikirim pada alamat berikut :
+                </p>
+                <p className="mt-5 font-serif text-xl font-semibold leading-8 text-ink sm:text-2xl lg:mt-3 lg:text-[13px] lg:leading-5">{wedding.gift.address}</p>
               </div>
             ) : null}
           </div>

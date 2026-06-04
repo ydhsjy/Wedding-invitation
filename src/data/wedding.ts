@@ -76,7 +76,7 @@ export const wedding = {
       role: "Mempelai Wanita",
       name: "Arnalda Janssencia Lopes",
       nickname: "Alda",
-      parents: "Putri kedua dari Bapak Kristovao Lopes & Ibu Josefa Adolfina Thani",
+      parents: "Putri kedua dari Bapak Cristovao Lopes & Ibu Josefa Adolfina Thani",
       image: assetPath("/assets/Bride.jpeg"),
       background: assetPath("/assets/bg%20bride.jpg")
     },
@@ -93,7 +93,7 @@ export const wedding = {
     {
       title: "Pemberkatan",
       date: "Jumat, 26 Juni 2026",
-      time: "11.00 WITA - selesai",
+      time: "10.00 WITA - selesai",
       venue: "Gereja Paroki St. Gregorius Agung Oeleta",
       address: "Oeleta, Kota Kupang",
       mapUrl: "https://maps.app.goo.gl/Lizi1yNfQDGyqqXA7",
@@ -163,6 +163,8 @@ export const wedding = {
   gift: {
     bank: "Bank Mandiri",
     logo: assetPath("/assets/BMRI.png"),
+    address:
+      "BTN KOREM OELETA BLOK F.19, RT.008/RW.003, Kel. Penkase Oeleta, Kec. Alak, Kota Kupang, NTT.",
     accounts: [
       {
         bank: "Bank Mandiri",

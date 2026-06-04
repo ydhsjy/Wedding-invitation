@@ -6,8 +6,8 @@ const items = [
   { href: "#couple", label: "Couple", icon: Heart },
   { href: "#event", label: "Event", icon: CalendarHeart },
   { href: "#gallery", label: "Gallery", icon: Images },
-  { href: "#rsvp", label: "RSVP", icon: MessageCircle },
-  { href: "#gift", label: "Gift", icon: Gift }
+  { href: "#gift", label: "Gift", icon: Gift },
+  { href: "#rsvp", label: "RSVP", icon: MessageCircle }
 ];
 
 export function MobileNav() {

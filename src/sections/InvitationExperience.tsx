@@ -60,8 +60,8 @@ export function InvitationExperience({ guestName }: { guestName?: string }) {
         <CountdownSection />
         <MarriageQuoteSection />
         <GallerySection />
-        <RSVPSection />
         <GiftSection />
+        <RSVPSection />
         <FooterSection />
       </main>
       <MusicButton ref={musicRef} src={wedding.audio} shouldPlay={opened} />
