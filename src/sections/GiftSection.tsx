@@ -36,10 +36,10 @@ export function GiftSection() {
               type="button"
               onClick={() => setIsOpen((current) => !current)}
               aria-expanded={isOpen}
-              className="group mx-auto grid h-28 w-36 place-items-center rounded-lg border border-gold/35 bg-ivory/80 text-ink shadow-premium backdrop-blur transition hover:-translate-y-1 hover:border-gold hover:bg-gold hover:text-ivory sm:h-32 sm:w-44 lg:h-20 lg:w-28"
+              className="group mx-auto grid h-24 w-32 place-items-center rounded-lg border border-gold/35 bg-ivory/80 text-ink shadow-premium backdrop-blur transition hover:-translate-y-1 hover:border-gold hover:bg-gold sm:h-28 sm:w-40 lg:h-16 lg:w-24"
             >
-              <span className="grid h-16 w-20 place-items-center rounded-md border border-current/30 bg-current/5 transition group-hover:bg-ivory/15 sm:h-20 sm:w-24 lg:h-12 lg:w-16">
-                <Mail className="h-9 w-9 lg:h-6 lg:w-6" aria-hidden="true" />
+              <span className="grid h-14 w-[4.5rem] place-items-center rounded-md border border-ink/30 bg-ink/5 transition group-hover:bg-ivory/20 sm:h-16 sm:w-20 lg:h-10 lg:w-14">
+                <Mail className="h-8 w-8 text-ink lg:h-5 lg:w-5" aria-hidden="true" />
               </span>
               <span className="sr-only">{isOpen ? "Tutup amplop digital" : "Buka amplop digital"}</span>
             </button>
