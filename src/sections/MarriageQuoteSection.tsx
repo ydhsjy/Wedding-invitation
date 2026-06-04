@@ -1,20 +1,24 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { MotionReveal } from "@/components/MotionReveal";
+import { PhotoPop } from "@/components/PhotoPop";
 import { wedding } from "@/data/wedding";
 
 export function MarriageQuoteSection() {
   return (
-    <section className="relative overflow-hidden bg-[#EEE5DA] pb-0 pt-10 sm:pt-12 lg:pt-8">
+    <section className="relative overflow-hidden bg-[#EEE5DA] py-10 sm:py-12 lg:py-8">
+      <div className="pointer-events-none absolute right-[-36rem] top-1/2 h-[460%] w-[360%] -translate-y-1/2 sm:right-[-44rem] sm:w-[260%] lg:right-[-18rem] lg:w-[170%]">
+        <Image src={wedding.images.marriageQuote} alt="" fill sizes="(max-width: 768px) 360vw, 1700px" className="object-contain object-right opacity-20" />
+      </div>
       <Container className="relative z-10">
-        <MotionReveal className="relative mx-auto max-w-2xl text-center">
+        <MotionReveal className="mx-auto max-w-2xl text-center">
           <p className="font-script text-[42px] font-normal leading-none text-ink sm:text-[56px] lg:text-[30px]">Marriage is a beautiful art</p>
-          <div className="pointer-events-none relative z-0 mx-auto -mt-2 h-40 w-[150vw] max-w-[36rem] sm:h-52 sm:max-w-[48rem] lg:h-28 lg:max-w-[24rem]">
-            <Image src={wedding.images.marriageQuote} alt="" fill sizes="(max-width: 768px) 150vw, 768px" className="object-contain object-center opacity-20" />
-          </div>
-          <blockquote className="relative z-10 mx-auto -mt-28 max-w-xl font-quote text-[23px] leading-7 text-clay text-balance sm:-mt-36 sm:text-[34px] sm:leading-[1.05] lg:-mt-20 lg:text-[18px]">
+          <blockquote className="mx-auto mt-6 max-w-xl font-quote text-[23px] leading-7 text-clay text-balance sm:text-[34px] sm:leading-[1.05] lg:mt-4 lg:text-[18px]">
             &ldquo;{wedding.marriageQuote}&rdquo;
           </blockquote>
+          <PhotoPop className="relative mx-auto mt-7 aspect-[3/4] w-20 overflow-hidden sm:w-24 lg:mt-5 lg:w-14" delay={0.1}>
+            <Image src={wedding.images.marriageQuote} alt="" fill sizes="96px" className="object-contain opacity-60" />
+          </PhotoPop>
         </MotionReveal>
       </Container>
     </section>
