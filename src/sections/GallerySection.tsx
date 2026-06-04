@@ -6,10 +6,10 @@ import { wedding } from "@/data/wedding";
 
 export function GallerySection() {
   return (
-    <section id="gallery" className="section-band bg-ink text-ivory">
+    <section id="gallery" className="section-band bg-ivory text-ink">
       <Container>
         <MotionReveal>
-          <SectionTitle eyebrow="Our Moment" title="Wedding Gallery" description="Fragmen kecil dari cerita kami, disusun dengan lembut untuk dikenang." light />
+          <SectionTitle eyebrow="Our Moment" title="Wedding Gallery" description="Fragmen kecil dari cerita kami, disusun dengan lembut untuk dikenang." />
         </MotionReveal>
         <MotionReveal className="mt-12">
           <GallerySlider images={wedding.gallery} />

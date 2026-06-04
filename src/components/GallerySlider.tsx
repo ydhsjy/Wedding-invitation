@@ -104,7 +104,7 @@ export function GallerySlider({ images }: { images: string[] }) {
             type="button"
             key={image}
             onClick={() => openPreview(index)}
-            className="group relative aspect-[3/4] max-h-[44svh] overflow-hidden bg-ink text-left focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-ink sm:aspect-square sm:max-h-none"
+            className="group relative aspect-[3/4] max-h-[44svh] overflow-hidden bg-paper text-left focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-ivory sm:aspect-square sm:max-h-none"
             aria-label={`Perbesar foto galeri ${index + 1}`}
           >
             <Image
@@ -135,7 +135,7 @@ export function GallerySlider({ images }: { images: string[] }) {
             onDragEnd={onDragEnd}
           >
             {sliderImages.map((image, index) => (
-              <div key={image} className="relative h-[68svh] max-h-[560px] min-h-[320px] w-full shrink-0 overflow-hidden bg-ink sm:min-h-[460px]">
+              <div key={image} className="relative h-[68svh] max-h-[560px] min-h-[320px] w-full shrink-0 overflow-hidden bg-paper sm:min-h-[460px]">
                 <Image
                   src={image}
                   alt={`Galeri pernikahan ${index + 5}`}
@@ -144,7 +144,7 @@ export function GallerySlider({ images }: { images: string[] }) {
                   className="object-cover"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
-                <span className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-ink/65 to-transparent" />
+                <span className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-ink/25 to-transparent" />
               </div>
             ))}
           </motion.div>
@@ -236,7 +236,7 @@ export function GallerySlider({ images }: { images: string[] }) {
           </button>
           <div className="absolute inset-0 z-0 flex h-svh w-screen items-center justify-center overflow-hidden px-0 py-14 sm:px-6 sm:py-20">
             <div className="relative h-full max-h-[calc(100svh-7rem)] w-screen max-w-none origin-center transition-transform duration-200 sm:max-h-[calc(100svh-10rem)] sm:w-full sm:max-w-[100vw]" style={{ transform: `scale(${zoomScale})` }}>
-              <Image src={previewImage} alt="Foto galeri diperbesar" fill sizes="100vw" className="object-contain" priority />
+              <Image src={previewImage} alt="Foto galeri diperbesar" fill sizes="100vw" className="object-cover sm:object-contain" priority />
             </div>
           </div>
         </div>
