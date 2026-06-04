@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2, ZoomIn, ZoomOut, X } from "lucide-react";
 import { motion, type PanInfo } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 export function GallerySlider({ images }: { images: string[] }) {
   const [active, setActive] = useState(0);
@@ -179,7 +180,8 @@ export function GallerySlider({ images }: { images: string[] }) {
         ))}
       </div>
 
-      {previewImage ? (
+      {typeof document !== "undefined" && previewImage
+        ? createPortal(
         <div ref={modalRef} className="fixed inset-0 z-[70] h-svh w-screen overflow-hidden bg-transparent text-ivory" role="dialog" aria-modal="true">
           <div className="absolute left-3 top-3 z-20 rounded-full bg-black/45 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-ivory/85 backdrop-blur sm:left-5 sm:top-5">
             {previewCounter} / {featuredImages.length}
@@ -221,7 +223,7 @@ export function GallerySlider({ images }: { images: string[] }) {
           <button
             type="button"
             onClick={() => movePreview(-1)}
-            className="absolute left-2 top-1/2 z-20 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-black/38 text-ivory backdrop-blur transition hover:bg-ivory hover:text-ink sm:left-5 sm:h-12 sm:w-12"
+            className="absolute left-0 top-1/2 z-20 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-black/38 text-ivory backdrop-blur transition hover:bg-ivory hover:text-ink sm:left-5 sm:h-12 sm:w-12"
             aria-label="Foto preview sebelumnya"
           >
             <ChevronLeft className="h-7 w-7" aria-hidden="true" />
@@ -229,7 +231,7 @@ export function GallerySlider({ images }: { images: string[] }) {
           <button
             type="button"
             onClick={() => movePreview(1)}
-            className="absolute right-2 top-1/2 z-20 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-black/38 text-ivory backdrop-blur transition hover:bg-ivory hover:text-ink sm:right-5 sm:h-12 sm:w-12"
+            className="absolute right-0 top-1/2 z-20 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-black/38 text-ivory backdrop-blur transition hover:bg-ivory hover:text-ink sm:right-5 sm:h-12 sm:w-12"
             aria-label="Foto preview berikutnya"
           >
             <ChevronRight className="h-7 w-7" aria-hidden="true" />
@@ -239,8 +241,10 @@ export function GallerySlider({ images }: { images: string[] }) {
               <Image src={previewImage} alt="Foto galeri diperbesar" fill sizes="100vw" className="object-cover sm:object-contain" priority />
             </div>
           </div>
-        </div>
-      ) : null}
+        </div>,
+          document.body
+        )
+        : null}
     </div>
   );
 }
