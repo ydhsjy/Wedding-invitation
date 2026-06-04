@@ -123,49 +123,51 @@ export function GallerySlider({ images }: { images: string[] }) {
         ))}
       </div>
 
-      <div className="overflow-hidden rounded-lg touch-pan-y">
-        <motion.div
-          className="flex cursor-grab active:cursor-grabbing"
-          animate={{ x: `-${active * 100}%` }}
-          transition={{ type: "spring", stiffness: 120, damping: 28, mass: 0.9 }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.24}
-          onDragEnd={onDragEnd}
+      <div className="relative">
+        <div className="overflow-hidden rounded-lg touch-pan-y">
+          <motion.div
+            className="flex cursor-grab active:cursor-grabbing"
+            animate={{ x: `-${active * 100}%` }}
+            transition={{ type: "spring", stiffness: 120, damping: 28, mass: 0.9 }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.24}
+            onDragEnd={onDragEnd}
+          >
+            {sliderImages.map((image, index) => (
+              <div key={image} className="relative h-[68svh] max-h-[560px] min-h-[320px] w-full shrink-0 overflow-hidden bg-ink sm:min-h-[460px]">
+                <Image
+                  src={image}
+                  alt={`Galeri pernikahan ${index + 5}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 900px"
+                  className="object-cover"
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
+                <span className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-ink/65 to-transparent" />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => move(-1)}
+          className="absolute left-4 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-ivory/88 text-ink shadow-soft backdrop-blur transition hover:bg-gold hover:text-ivory"
+          aria-label="Foto sebelumnya"
         >
-          {sliderImages.map((image, index) => (
-            <div key={image} className="relative h-[68svh] max-h-[560px] min-h-[320px] w-full shrink-0 overflow-hidden bg-ink sm:min-h-[460px]">
-              <Image
-                src={image}
-                alt={`Galeri pernikahan ${index + 5}`}
-                fill
-                sizes="(max-width: 768px) 100vw, 900px"
-                className="object-cover"
-                loading={index === 0 ? "eager" : "lazy"}
-              />
-              <span className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-ink/65 to-transparent" />
-            </div>
-          ))}
-        </motion.div>
+          <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+        </button>
+
+        <button
+          type="button"
+          onClick={() => move(1)}
+          className="absolute right-4 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-ivory/88 text-ink shadow-soft backdrop-blur transition hover:bg-gold hover:text-ivory"
+          aria-label="Foto berikutnya"
+        >
+          <ChevronRight className="h-5 w-5" aria-hidden="true" />
+        </button>
       </div>
-
-      <button
-        type="button"
-        onClick={() => move(-1)}
-        className="absolute left-4 top-[calc(50%+5rem)] grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-ivory/88 text-ink shadow-soft backdrop-blur transition hover:bg-gold hover:text-ivory"
-        aria-label="Foto sebelumnya"
-      >
-        <ChevronLeft className="h-5 w-5" aria-hidden="true" />
-      </button>
-
-      <button
-        type="button"
-        onClick={() => move(1)}
-        className="absolute right-4 top-[calc(50%+5rem)] grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-ivory/88 text-ink shadow-soft backdrop-blur transition hover:bg-gold hover:text-ivory"
-        aria-label="Foto berikutnya"
-      >
-        <ChevronRight className="h-5 w-5" aria-hidden="true" />
-      </button>
 
       <div className="mt-4 flex flex-wrap justify-center gap-1.5">
         {sliderImages.map((image, index) => (
@@ -178,7 +180,7 @@ export function GallerySlider({ images }: { images: string[] }) {
       </div>
 
       {previewImage ? (
-        <div ref={modalRef} className="fixed inset-0 z-[70] h-svh w-screen overflow-hidden bg-black text-ivory" role="dialog" aria-modal="true">
+        <div ref={modalRef} className="fixed inset-0 z-[70] h-svh w-screen overflow-hidden bg-transparent text-ivory" role="dialog" aria-modal="true">
           <div className="absolute left-3 top-3 z-20 rounded-full bg-black/45 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-ivory/85 backdrop-blur sm:left-5 sm:top-5">
             {previewCounter} / {featuredImages.length}
           </div>
@@ -232,9 +234,8 @@ export function GallerySlider({ images }: { images: string[] }) {
           >
             <ChevronRight className="h-7 w-7" aria-hidden="true" />
           </button>
-          <div className="absolute inset-x-0 top-0 z-10 h-24 bg-gradient-to-b from-black/75 to-transparent" aria-hidden="true" />
-          <div className="absolute inset-0 z-0 flex h-svh w-screen items-center justify-center overflow-hidden px-2 py-16 sm:px-6 sm:py-20">
-            <div className="relative h-full max-h-[calc(100svh-8rem)] w-full max-w-[100vw] origin-center transition-transform duration-200 sm:max-h-[calc(100svh-10rem)]" style={{ transform: `scale(${zoomScale})` }}>
+          <div className="absolute inset-0 z-0 flex h-svh w-screen items-center justify-center overflow-hidden px-0 py-14 sm:px-6 sm:py-20">
+            <div className="relative h-full max-h-[calc(100svh-7rem)] w-screen max-w-none origin-center transition-transform duration-200 sm:max-h-[calc(100svh-10rem)] sm:w-full sm:max-w-[100vw]" style={{ transform: `scale(${zoomScale})` }}>
               <Image src={previewImage} alt="Foto galeri diperbesar" fill sizes="100vw" className="object-contain" priority />
             </div>
           </div>

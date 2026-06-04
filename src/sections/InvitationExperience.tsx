@@ -1,11 +1,11 @@
 "use client";
 
 import { AnimatePresence } from "framer-motion";
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { DesktopScene } from "@/components/DesktopScene";
 import { MobileNav } from "@/components/MobileNav";
-import { MusicButton } from "@/components/MusicButton";
+import { MusicButton, type MusicButtonHandle } from "@/components/MusicButton";
 import { wedding } from "@/data/wedding";
 import { useLockBody } from "@/hooks/useLockBody";
 import { formatGuestName } from "@/lib/utils";
@@ -35,16 +35,22 @@ function getUrlGuestName() {
 
 export function InvitationExperience({ guestName }: { guestName?: string }) {
   const [opened, setOpened] = useState(false);
+  const musicRef = useRef<MusicButtonHandle>(null);
   const urlGuestName = useSyncExternalStore(subscribeToGuestName, getUrlGuestName, () => undefined);
   const recipient = useMemo(() => formatGuestName(urlGuestName || guestName), [guestName, urlGuestName]);
   useLockBody(!opened);
+
+  const openInvitation = () => {
+    void musicRef.current?.play();
+    setOpened(true);
+  };
 
   return (
     <>
       <AnimatePresence>
         <LoadingScreen />
       </AnimatePresence>
-      <OpeningSection guestName={recipient} isOpen={opened} onOpen={() => setOpened(true)} />
+      <OpeningSection guestName={recipient} isOpen={opened} onOpen={openInvitation} />
       <DesktopScene />
       <main className="relative ml-auto min-h-svh w-full overflow-hidden bg-paper shadow-[0_0_80px_rgba(0,0,0,0.32)] lg:w-[min(42vw,640px)]">
         <HeroSection />
@@ -58,7 +64,7 @@ export function InvitationExperience({ guestName }: { guestName?: string }) {
         <GiftSection />
         <FooterSection />
       </main>
-      <MusicButton src={wedding.audio} shouldPlay={opened} />
+      <MusicButton ref={musicRef} src={wedding.audio} shouldPlay={opened} />
       <MobileNav />
       <div className="grain" aria-hidden="true" />
     </>

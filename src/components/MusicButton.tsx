@@ -1,7 +1,7 @@
 "use client";
 
 import { Pause, Play, Volume2 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type MusicButtonProps = {
@@ -9,20 +9,38 @@ type MusicButtonProps = {
   shouldPlay: boolean;
 };
 
-export function MusicButton({ src, shouldPlay }: MusicButtonProps) {
+export type MusicButtonHandle = {
+  play: () => Promise<void>;
+};
+
+export const MusicButton = forwardRef<MusicButtonHandle, MusicButtonProps>(function MusicButton({ src, shouldPlay }, ref) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
 
-  useEffect(() => {
+  const playMusic = async () => {
     const audio = audioRef.current;
-    if (!audio || !shouldPlay) {
+    if (!audio) {
       return;
     }
 
-    audio
-      .play()
-      .then(() => setPlaying(true))
-      .catch(() => setPlaying(false));
+    try {
+      await audio.play();
+      setPlaying(true);
+    } catch {
+      setPlaying(false);
+    }
+  };
+
+  useImperativeHandle(ref, () => ({
+    play: playMusic
+  }));
+
+  useEffect(() => {
+    if (!shouldPlay) {
+      return;
+    }
+
+    void playMusic();
   }, [shouldPlay]);
 
   const toggleMusic = async () => {
@@ -57,4 +75,4 @@ export function MusicButton({ src, shouldPlay }: MusicButtonProps) {
       </button>
     </>
   );
-}
+});
