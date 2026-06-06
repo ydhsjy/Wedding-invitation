@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2, ZoomIn, ZoomOut, X } from "lucide-react";
 import { motion, type PanInfo } from "framer-motion";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 export function GallerySlider({ images }: { images: string[] }) {
@@ -12,9 +12,11 @@ export function GallerySlider({ images }: { images: string[] }) {
   const [zoomScale, setZoomScale] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
-  const featuredImages = images.slice(0, 4);
-  const sliderImages = images.slice(4);
-  const previewImage = previewIndex === null ? null : featuredImages[previewIndex];
+  const leadingPreviewImages = useMemo(() => images.slice(0, 4), [images]);
+  const trailingPreviewImages = useMemo(() => images.slice(26, 30), [images]);
+  const previewImages = useMemo(() => [...leadingPreviewImages, ...trailingPreviewImages], [leadingPreviewImages, trailingPreviewImages]);
+  const sliderImages = useMemo(() => images.slice(4, 26), [images]);
+  const previewImage = previewIndex === null ? null : previewImages[previewIndex];
   const previewCounter = previewIndex === null ? 0 : previewIndex + 1;
 
   const move = (direction: number) => {
@@ -51,9 +53,9 @@ export function GallerySlider({ images }: { images: string[] }) {
         return current;
       }
 
-      return (current + direction + featuredImages.length) % featuredImages.length;
+      return (current + direction + previewImages.length) % previewImages.length;
     });
-  }, [featuredImages.length]);
+  }, [previewImages.length]);
 
   const toggleFullscreen = () => {
     if (!modalRef.current) {
@@ -100,7 +102,7 @@ export function GallerySlider({ images }: { images: string[] }) {
   return (
     <div className="relative space-y-8">
       <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-        {featuredImages.map((image, index) => (
+        {leadingPreviewImages.map((image, index) => (
           <button
             type="button"
             key={image}
@@ -143,7 +145,7 @@ export function GallerySlider({ images }: { images: string[] }) {
                   fill
                   sizes="(max-width: 768px) 100vw, 900px"
                   className="object-cover"
-                  loading={index === 0 ? "eager" : "lazy"}
+                  loading="lazy"
                 />
                 <span className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-ink/25 to-transparent" />
               </div>
@@ -180,11 +182,41 @@ export function GallerySlider({ images }: { images: string[] }) {
         ))}
       </div>
 
+      <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+        {trailingPreviewImages.map((image, index) => {
+          const previewPosition = leadingPreviewImages.length + index;
+          const galleryNumber = 27 + index;
+
+          return (
+            <button
+              type="button"
+              key={image}
+              onClick={() => openPreview(previewPosition)}
+              className="group relative aspect-[3/4] max-h-[44svh] overflow-hidden bg-paper text-left focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-ivory sm:aspect-square sm:max-h-none"
+              aria-label={`Perbesar foto galeri ${galleryNumber}`}
+            >
+              <Image
+                src={image}
+                alt={`Galeri pernikahan ${galleryNumber}`}
+                fill
+                sizes="(max-width: 640px) 50vw, 25vw"
+                className="object-cover transition duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <span className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/35" aria-hidden="true" />
+              <span className="absolute left-1/2 top-1/2 grid h-11 w-11 -translate-x-1/2 -translate-y-1/2 scale-75 place-items-center rounded-full bg-ivory/95 text-ink opacity-0 shadow-soft backdrop-blur transition duration-300 group-hover:scale-100 group-hover:opacity-100 group-hover:bg-gold group-hover:text-ivory">
+                <ZoomIn className="h-4 w-4" aria-hidden="true" />
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
       {typeof document !== "undefined" && previewImage
         ? createPortal(
         <div ref={modalRef} className="fixed inset-0 z-[70] h-svh w-screen overflow-hidden bg-transparent text-ivory" role="dialog" aria-modal="true">
           <div className="absolute left-3 top-3 z-20 rounded-full bg-black/45 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-ivory/85 backdrop-blur sm:left-5 sm:top-5">
-            {previewCounter} / {featuredImages.length}
+            {previewCounter} / {previewImages.length}
           </div>
           <div className="absolute right-3 top-3 z-20 flex items-center gap-1.5 sm:right-5 sm:top-5 sm:gap-2">
             <button

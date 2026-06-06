@@ -85,7 +85,7 @@ export const wedding = {
       name: "Albertus Yudha Sanjaya",
       nickname: "Yudha",
       parents: "Putra kedua dari Bapak Budiharso & Ibu Waldetrudis",
-      image: assetPath("/assets/Groom.jpg"),
+      image: assetPath("/assets/Groom.jpeg"),
       background: assetPath("/assets/bg%20groom.jpg")
     }
   ] satisfies Couple[],
@@ -114,14 +114,14 @@ export const wedding = {
     assetPath("/assets/gallery-2.jpeg"),
     assetPath("/assets/gallery-3.jpeg"),
     assetPath("/assets/gallery-4.jpeg"),
-    assetPath("/assets/gallery-5.jpeg"),
-    assetPath("/assets/gallery-6.jpeg"),
+    assetPath("/assets/gallery-5.jpg"),
+    assetPath("/assets/gallery-6.jpg"),
     assetPath("/assets/gallery-7.jpeg"),
-    assetPath("/assets/gallery-8.jpeg"),
+    assetPath("/assets/gallery-8.jpg"),
     assetPath("/assets/gallery-9.jpeg"),
-    assetPath("/assets/gallery-10.jpg"),
-    assetPath("/assets/gallery-11.jpg"),
-    assetPath("/assets/gallery-12.jpg"),
+    assetPath("/assets/gallery-10.jpeg"),
+    assetPath("/assets/gallery-11.jpeg"),
+    assetPath("/assets/gallery-12.jpeg"),
     assetPath("/assets/gallery-13.jpeg"),
     assetPath("/assets/gallery-14.jpeg"),
     assetPath("/assets/gallery-15.jpeg"),
@@ -129,7 +129,17 @@ export const wedding = {
     assetPath("/assets/gallery-17.jpeg"),
     assetPath("/assets/gallery-18.jpeg"),
     assetPath("/assets/gallery-19.jpeg"),
-    assetPath("/assets/gallery-20.jpeg")
+    assetPath("/assets/gallery-20.jpeg"),
+    assetPath("/assets/gallery-21.jpeg"),
+    assetPath("/assets/gallery-22.jpeg"),
+    assetPath("/assets/gallery-23.jpeg"),
+    assetPath("/assets/gallery-24.jpeg"),
+    assetPath("/assets/gallery-25.jpeg"),
+    assetPath("/assets/gallery-26.jpg"),
+    assetPath("/assets/gallery-27.jpeg"),
+    assetPath("/assets/gallery-28.jpeg"),
+    assetPath("/assets/gallery-29.jpeg"),
+    assetPath("/assets/gallery-30.jpg")
   ],
   stories: [
     {
