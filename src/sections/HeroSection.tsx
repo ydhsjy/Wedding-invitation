@@ -51,7 +51,6 @@ export function HeroSection() {
         </AnimatePresence>
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-ink/0 via-ink/8 to-ink/60" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-[-1px] z-10 h-10 bg-white" />
       <div className="relative z-20 mx-auto flex min-h-svh max-w-6xl flex-col items-center justify-end px-5 pb-20 pt-28 text-center sm:px-8 lg:px-10 lg:pb-24">
         <motion.p
           className="font-sans text-xs font-semibold uppercase leading-none tracking-[0.21em] text-ivory/92 sm:text-[15px] lg:text-[8px]"

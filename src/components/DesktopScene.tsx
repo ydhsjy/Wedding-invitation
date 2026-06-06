@@ -5,7 +5,7 @@ import { wedding } from "@/data/wedding";
 export function DesktopScene() {
   return (
     <aside className="fixed inset-y-0 left-0 hidden overflow-hidden bg-ink text-ivory lg:block lg:w-[calc(100%-min(42vw,640px))]">
-      <Image src={wedding.images.desktop} alt="" fill priority sizes="60vw" className="object-cover" />
+      <Image src={wedding.images.desktop} alt="" fill sizes="60vw" className="object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-ink/72 via-ink/34 to-ink/14" />
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/58 to-transparent" />
       <div className="relative z-10 flex min-h-svh items-end px-12 pb-20 xl:px-24">

@@ -23,6 +23,11 @@ export function GallerySlider({ images }: { images: string[] }) {
     setActive((current) => (current + direction + sliderImages.length) % sliderImages.length);
   };
 
+  const shouldRenderSlide = (index: number) => {
+    const distance = Math.abs(index - active);
+    return distance <= 1 || distance >= sliderImages.length - 1;
+  };
+
   const onDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (info.offset.x < -42 || info.velocity.x < -320) {
       move(1);
@@ -139,14 +144,16 @@ export function GallerySlider({ images }: { images: string[] }) {
           >
             {sliderImages.map((image, index) => (
               <div key={image} className="relative h-[68svh] max-h-[560px] min-h-[320px] w-full shrink-0 overflow-hidden bg-paper sm:min-h-[460px]">
-                <Image
-                  src={image}
-                  alt={`Galeri pernikahan ${index + 5}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 900px"
-                  className="object-cover"
-                  loading="lazy"
-                />
+                {shouldRenderSlide(index) ? (
+                  <Image
+                    src={image}
+                    alt={`Galeri pernikahan ${index + 5}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 900px"
+                    className="object-cover"
+                    loading="lazy"
+                  />
+                ) : null}
                 <span className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-ink/25 to-transparent" />
               </div>
             ))}

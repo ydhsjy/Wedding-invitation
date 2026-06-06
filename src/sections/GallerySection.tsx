@@ -6,7 +6,7 @@ import { wedding } from "@/data/wedding";
 
 export function GallerySection() {
   return (
-    <section id="gallery" className="section-band bg-ivory text-ink">
+    <section id="gallery" className="section-band bg-[#edf5f8] text-ink">
       <Container>
         <MotionReveal>
           <SectionTitle eyebrow="Our Moment" title="Wedding Gallery" description="Fragmen kecil dari cerita kami, disusun dengan lembut untuk dikenang." />
