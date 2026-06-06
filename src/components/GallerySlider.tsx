@@ -277,7 +277,7 @@ export function GallerySlider({ images }: { images: string[] }) {
           </button>
           <div className="absolute inset-0 z-0 flex h-svh w-screen items-center justify-center overflow-hidden px-0 py-14 sm:px-6 sm:py-20">
             <div className="relative h-full max-h-[calc(100svh-7rem)] w-screen max-w-none origin-center transition-transform duration-200 sm:max-h-[calc(100svh-10rem)] sm:w-full sm:max-w-[100vw]" style={{ transform: `scale(${zoomScale})` }}>
-              <Image src={previewImage} alt="Foto galeri diperbesar" fill sizes="100vw" className="object-cover sm:object-contain" priority />
+              <Image src={previewImage} alt="Foto galeri diperbesar" fill sizes="100vw" className="object-cover sm:object-contain" />
             </div>
           </div>
         </div>,
