@@ -15,7 +15,7 @@ export function formatGuestName(value?: string) {
 
 export function assetPath(path: string) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const assetVersion = process.env.NEXT_PUBLIC_ASSET_VERSION || "20260606-2";
+  const assetVersion = process.env.NEXT_PUBLIC_ASSET_VERSION || "20260606-3";
   const cacheBuster = path.startsWith("/assets/") ? `${path.includes("?") ? "&" : "?"}v=${assetVersion}` : "";
 
   return `${basePath}${path}${cacheBuster}`;

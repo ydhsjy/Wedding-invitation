@@ -6,7 +6,7 @@ import { wedding } from "@/data/wedding";
 
 export function QuoteSection() {
   return (
-    <section className="section-band bg-paper text-ink">
+    <section className="section-band bg-white text-ink">
       <Container className="relative z-10">
         <MotionReveal className="mx-auto max-w-4xl text-center">
           <div className="relative mx-auto min-h-[23.5rem] overflow-hidden rounded-[1.75rem] px-6 py-12 sm:min-h-[26rem] sm:px-14 sm:py-16 lg:min-h-[20rem]">

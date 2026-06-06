@@ -20,6 +20,7 @@ import { MarriageQuoteSection } from "@/sections/MarriageQuoteSection";
 import { OpeningSection } from "@/sections/OpeningSection";
 import { QuoteSection } from "@/sections/QuoteSection";
 import { RSVPSection } from "@/sections/RSVPSection";
+import { SectionDivider } from "@/sections/SectionDivider";
 
 function subscribeToGuestName() {
   return () => {};
@@ -54,6 +55,7 @@ export function InvitationExperience({ guestName }: { guestName?: string }) {
       <DesktopScene />
       <main className="relative ml-auto min-h-svh w-full overflow-hidden bg-paper shadow-[0_0_80px_rgba(0,0,0,0.32)] lg:w-[min(42vw,640px)]">
         <HeroSection />
+        <SectionDivider />
         <QuoteSection />
         <CoupleSection />
         <EventSection />
