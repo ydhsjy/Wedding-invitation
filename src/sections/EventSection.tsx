@@ -19,7 +19,7 @@ export function EventSection() {
         <div className="mx-auto mt-5 grid max-w-4xl gap-6">
           {wedding.events.map((event, index) => (
             <MotionReveal key={event.title} delay={index * 0.12}>
-              <article className="relative mx-auto min-h-[21rem] w-full max-w-[20rem] overflow-hidden rounded-[1.75rem] bg-[#edf5f8] px-5 py-5 text-center text-[#1f3340] shadow-[0_18px_36px_rgba(45,80,100,0.16)] ring-1 ring-[#9bb8c8]/35 sm:max-w-[23rem] sm:px-7 sm:py-6 lg:min-h-[22rem] lg:max-w-[26rem] lg:rounded-[2rem] lg:px-8 lg:py-6">
+              <article className="relative mx-auto min-h-[21rem] w-full max-w-[20rem] overflow-hidden rounded-[1.75rem] bg-white px-5 py-5 text-center text-[#1f3340] shadow-[0_18px_36px_rgba(45,80,100,0.12)] ring-1 ring-[#d8d6d2]/80 sm:max-w-[23rem] sm:px-7 sm:py-6 lg:min-h-[22rem] lg:max-w-[26rem] lg:rounded-[2rem] lg:px-8 lg:py-6">
                 <div className="relative z-10 mx-auto flex min-h-[18rem] max-w-[18rem] flex-col items-center justify-start lg:min-h-[19rem] lg:max-w-sm">
                   <Image
                     src={event.image}

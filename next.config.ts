@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repositoryName = "undangan-yudha-alda";
+const repositoryName = "Wedding-invitation";
 const basePath = isGithubActions ? `/${repositoryName}` : "";
 
 const nextConfig: NextConfig = {
