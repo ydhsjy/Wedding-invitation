@@ -53,7 +53,7 @@ export function InvitationExperience({ guestName }: { guestName?: string }) {
       </AnimatePresence>
       <OpeningSection guestName={recipient} isOpen={opened} onOpen={openInvitation} />
       <DesktopScene />
-      <main className="relative ml-auto min-h-svh w-full overflow-hidden bg-paper shadow-[0_0_80px_rgba(0,0,0,0.32)] lg:w-[min(42vw,640px)]">
+      <main className="relative ml-auto min-h-svh w-full overflow-hidden bg-white shadow-[0_0_80px_rgba(0,0,0,0.32)] lg:w-[min(42vw,640px)]">
         <HeroSection />
         <SectionDivider />
         <QuoteSection />

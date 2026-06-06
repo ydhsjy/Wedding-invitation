@@ -7,7 +7,7 @@ import { wedding } from "@/data/wedding";
 
 export function CoupleSection() {
   return (
-    <section id="couple" className="section-band bg-paper">
+    <section id="couple" className="section-band bg-white">
       <Container>
         <MotionReveal>
           <SectionTitle

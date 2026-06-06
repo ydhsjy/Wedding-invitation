@@ -5,7 +5,7 @@ import { wedding } from "@/data/wedding";
 
 export function RSVPSection() {
   return (
-    <section id="rsvp" className="section-band bg-[#EEE5DA]">
+    <section id="rsvp" className="section-band bg-white">
       <Container>
         <MotionReveal>
           <div className="mx-auto max-w-2xl text-center">

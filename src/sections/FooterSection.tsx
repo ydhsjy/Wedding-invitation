@@ -5,8 +5,8 @@ import { wedding } from "@/data/wedding";
 
 export function FooterSection() {
   return (
-    <footer className="relative min-h-svh overflow-hidden bg-paper text-ink">
-      <div className="relative w-full overflow-hidden bg-paper">
+    <footer className="relative min-h-svh overflow-hidden bg-white text-ink">
+      <div className="relative w-full overflow-hidden bg-white">
         <div className="relative h-[62svh] w-full sm:aspect-video sm:h-auto">
           <Image src={wedding.images.closing} alt="" fill sizes="100vw" className="object-cover object-center sm:object-contain" />
         </div>

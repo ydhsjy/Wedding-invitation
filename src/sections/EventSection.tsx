@@ -7,7 +7,7 @@ import { wedding } from "@/data/wedding";
 
 export function EventSection() {
   return (
-    <section id="event" className="section-band bg-paper">
+    <section id="event" className="section-band bg-white">
       <Container>
         <MotionReveal>
           <SectionTitle

@@ -21,7 +21,7 @@ export function GiftSection() {
   };
 
   return (
-    <section id="gift" className="section-band bg-paper">
+    <section id="gift" className="section-band bg-white">
       <Container>
         <MotionReveal>
           <SectionTitle

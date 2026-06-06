@@ -11,7 +11,7 @@ export function CountdownSection() {
   const time = useCountdown(wedding.isoDate);
 
   return (
-    <section className="section-band bg-paper">
+    <section className="section-band bg-white">
       <Container>
         <MotionReveal>
           <SectionTitle eyebrow="Menuju Hari Bahagia" title="Save The Date" />
