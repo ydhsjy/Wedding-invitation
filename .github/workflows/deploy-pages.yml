@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_PATH: /Wedding-invitation
+      NEXT_PUBLIC_BASE_PATH: /undangan-yudha-alda
     steps:
       - name: Checkout
         uses: actions/checkout@v4
