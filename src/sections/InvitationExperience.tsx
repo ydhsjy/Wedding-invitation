@@ -61,6 +61,7 @@ export function InvitationExperience({ guestName }: { guestName?: string }) {
         <EventSection />
         <CountdownSection />
         <MarriageQuoteSection />
+        <SectionDivider image={wedding.images.marriageDivider} position="bottom" />
         <GallerySection />
         <GiftSection />
         <RSVPSection />

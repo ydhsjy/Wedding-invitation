@@ -65,11 +65,12 @@ export const wedding = {
     desktop: assetPath("/assets/Desktop.jpg"),
     hero: assetPath("/assets/kanan%20awal.jpeg"),
     sectionDivider: assetPath("/assets/bg%20section.jpeg"),
+    marriageDivider: assetPath("/assets/bg%20mariage.jpeg"),
     quote: assetPath("/assets/bg1.jpeg"),
     quoteFrame: assetPath("/assets/bg%20frame.png"),
-    quoteSecondFrame: assetPath("/assets/bg%20kutipan.png"),
-    countdown: assetPath("/assets/bg%20quote.jpg"),
-    marriageQuote: assetPath("/assets/bg%20kutipan.png"),
+    quoteSecondFrame: assetPath("/assets/bg%20quote.png"),
+    countdown: assetPath("/assets/bg%20quote.png"),
+    marriageQuote: assetPath("/assets/bg%20mariage.jpeg"),
     closing: assetPath("/assets/Ending.jpg")
   },
   couples: [
@@ -159,23 +160,12 @@ export const wedding = {
       description: "Dengan hati penuh syukur, kami melangkah menuju janji suci di hadapan Tuhan."
     }
   ] satisfies TimelineStory[],
-  wishes: [
-    {
-      name: "Keluarga Besar",
-      attendance: "Hadir",
-      message: "Semoga Tuhan memberkati perjalanan rumah tangga Yudha dan Alda."
-    },
-    {
-      name: "Sahabat",
-      attendance: "Hadir",
-      message: "Bahagia selalu, saling menguatkan, dan penuh kasih sepanjang hidup."
-    }
-  ] satisfies Wish[],
+  wishes: [] satisfies Wish[],
   gift: {
     bank: "Bank Mandiri",
     logo: assetPath("/assets/BMRI.png"),
     address:
-      "BTN KOREM OELETA BLOK F.19, RT.008/RW.003, Kel. Penkase Oeleta, Kec. Alak, Kota Kupang, NTT.",
+      "BTN Korem Oeleta blok F.19, RT.008/RW.003, Kel. Penkase Oeleta, Kec. Alak, Kota Kupang, NTT.",
     accounts: [
       {
         bank: "Bank Mandiri",

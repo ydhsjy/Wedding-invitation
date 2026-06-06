@@ -6,7 +6,7 @@ import { wedding } from "@/data/wedding";
 
 export function MarriageQuoteSection() {
   return (
-    <section className="relative overflow-hidden bg-[#EEE5DA] py-10 sm:py-12 lg:py-8">
+    <section className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-8">
       <div className="pointer-events-none absolute right-[-36rem] top-1/2 h-[460%] w-[360%] -translate-y-1/2 sm:right-[-44rem] sm:w-[260%] lg:right-[-18rem] lg:w-[170%]">
         <Image src={wedding.images.marriageQuote} alt="" fill sizes="(max-width: 768px) 360vw, 1700px" className="object-contain object-right opacity-20" />
       </div>
