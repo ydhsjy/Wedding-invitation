@@ -8,9 +8,9 @@ export function FooterSection() {
     <footer className="relative min-h-svh overflow-hidden bg-white text-ink">
       <div className="relative w-full overflow-hidden bg-white">
         <div className="relative h-[62svh] w-full sm:aspect-video sm:h-auto">
-          <Image src={wedding.images.closing} alt="" fill sizes="100vw" className="object-cover object-center sm:object-contain" />
+          <Image src={wedding.images.marriageDivider} alt="" fill sizes="100vw" className="object-cover object-bottom" />
         </div>
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-paper via-paper/80 to-transparent backdrop-blur-[2px]" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/80 to-transparent backdrop-blur-[2px]" />
       </div>
       <Container className="relative z-10 -mt-20 flex min-h-[52svh] items-end pb-24 pt-12 text-center sm:-mt-24 sm:min-h-[48svh] sm:pb-28 sm:pt-16 lg:-mt-14 lg:min-h-[34svh] lg:pb-20 lg:pt-8">
         <MotionReveal className="mx-auto w-full max-w-2xl">
