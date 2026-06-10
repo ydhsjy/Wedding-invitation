@@ -72,7 +72,7 @@ export function RSVPForm({ initialWishes }: { initialWishes: Wish[] }) {
           </label>
           <button
             type="submit"
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-ink px-6 py-3 font-sans text-sm font-medium text-ivory transition hover:bg-clay lg:text-[7px]"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-[#315f9f] px-6 py-3 font-sans text-sm font-medium text-white transition hover:bg-[#244a7f] lg:text-[7px]"
           >
             <Send className="h-4 w-4" aria-hidden="true" />
             Kirim Ucapan
