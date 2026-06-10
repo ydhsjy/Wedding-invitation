@@ -8,7 +8,7 @@ export function FooterSection() {
     <footer className="relative min-h-svh overflow-hidden bg-white text-ink">
       <div className="relative w-full overflow-hidden bg-white">
         <div className="relative h-[62svh] w-full sm:aspect-video sm:h-auto">
-          <Image src={wedding.images.marriageDivider} alt="" fill sizes="100vw" className="object-cover object-bottom" />
+          <Image src={wedding.images.closing} alt="" fill sizes="100vw" className="object-cover object-center sm:object-contain" />
         </div>
         <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/80 to-transparent backdrop-blur-[2px]" />
       </div>
@@ -21,6 +21,9 @@ export function FooterSection() {
           <h2 className="couple-name-titlecase mt-5 whitespace-nowrap font-script text-[50px] font-normal leading-none text-ink sm:text-[66px] lg:text-[34px]">{wedding.coupleNames}</h2>
         </MotionReveal>
       </Container>
+      <div className="relative h-36 w-full overflow-hidden bg-white sm:h-44 lg:h-32" aria-hidden="true">
+        <Image src={wedding.images.marriageDivider} alt="" fill sizes="100vw" className="object-cover object-bottom" />
+      </div>
     </footer>
   );
 }
