@@ -79,7 +79,7 @@ export const wedding = {
       nickname: "Alda",
       parents: "Putri kedua dari Bapak Cristovao Lopes & Ibu Josefa Adolfina Thani",
       image: assetPath("/assets/Bride.jpeg"),
-      background: assetPath("/assets/bg%20bride.jpg")
+      background: assetPath("/assets/optimized/bg%20bride-blur.webp")
     },
     {
       role: "Mempelai Pria",
@@ -87,7 +87,7 @@ export const wedding = {
       nickname: "Yudha",
       parents: "Putra kedua dari Bapak Budiharso & Ibu Waldetrudis",
       image: assetPath("/assets/optimized/Groom.webp"),
-      background: assetPath("/assets/bg%20groom.jpg")
+      background: assetPath("/assets/optimized/bg%20groom-blur.webp")
     }
   ] satisfies Couple[],
   events: [

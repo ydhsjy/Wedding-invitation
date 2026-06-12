@@ -10,6 +10,7 @@ const imageExtensions = new Set([".jpg", ".jpeg", ".png"]);
 const imageProfiles = [
   { pattern: /^gallery-\d+$/i, width: 1400, quality: 78 },
   { pattern: /^Tes Awal$/i, width: 1400, quality: 74 },
+  { pattern: /^bg (bride|groom)$/i, width: 1200, quality: 70, blur: 8, suffix: "-blur" },
   { pattern: /^(Desktop|Ending|Groom|ODS02206|IMG_5516\.JPG)$/i, width: 1600, quality: 78 }
 ];
 
@@ -32,7 +33,7 @@ for (const file of files) {
   }
 
   const source = join(assets, file);
-  const target = join(optimized, `${baseName}.webp`);
+  const target = join(optimized, `${baseName}${profile.suffix || ""}.webp`);
   const sourceStat = await stat(source);
   const targetStat = await stat(target).catch(() => null);
 
@@ -40,17 +41,23 @@ for (const file of files) {
     continue;
   }
 
-  await sharp(source, { failOn: "none" })
+  let pipeline = sharp(source, { failOn: "none" })
     .rotate()
     .resize({
       width: profile.width,
       height: profile.width,
       fit: "inside",
       withoutEnlargement: true
-    })
+    });
+
+  if (profile.blur) {
+    pipeline = pipeline.blur(profile.blur);
+  }
+
+  await pipeline
     .webp({ quality: profile.quality, effort: 4 })
     .toFile(target);
 
   const optimizedStat = await stat(target);
-  console.log(`${file} -> optimized/${baseName}.webp (${sourceStat.size} -> ${optimizedStat.size})`);
+  console.log(`${file} -> optimized/${baseName}${profile.suffix || ""}.webp (${sourceStat.size} -> ${optimizedStat.size})`);
 }

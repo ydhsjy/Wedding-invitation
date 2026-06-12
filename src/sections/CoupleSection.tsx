@@ -21,8 +21,8 @@ export function CoupleSection() {
           {wedding.couples.map((person, index) => (
             <div key={person.name}>
               <article className="relative grid min-h-[18rem] overflow-hidden rounded-[1.75rem] bg-[#edf5f8] p-5 shadow-soft ring-1 ring-[#9bb8c8]/35 sm:grid-cols-[0.9fr_1.1fr] sm:items-center sm:p-7">
-                <Image src={person.background} alt="" fill sizes="(max-width: 768px) 95vw, 760px" className={`scale-105 object-cover opacity-14 ${index === 0 ? "object-left" : ""}`} />
-                <div className="absolute inset-0 bg-[#edf5f8]/78" aria-hidden="true" />
+                <Image src={person.background} alt="" fill sizes="(max-width: 768px) 95vw, 760px" className={`scale-110 object-cover opacity-22 ${index === 0 ? "object-left" : ""}`} />
+                <div className="absolute inset-0 bg-[#edf5f8]/72" aria-hidden="true" />
                 <div className={`relative z-10 mx-auto w-full max-w-[16rem] text-center sm:max-w-[18rem] ${index === 0 ? "sm:order-2 sm:mr-0" : "sm:order-1 sm:ml-0"}`}>
                   <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.21em] text-[#4e7085] lg:text-[6px]">{person.role}</p>
                   <PhotoPop className="relative aspect-[3/4] transform-gpu overflow-hidden rounded-[52%_48%_47%_53%/42%_43%_57%_58%] bg-ivory shadow-soft" delay={0.04}>
