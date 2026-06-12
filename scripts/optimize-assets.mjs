@@ -10,7 +10,7 @@ const imageExtensions = new Set([".jpg", ".jpeg", ".png"]);
 const imageProfiles = [
   { pattern: /^gallery-\d+$/i, width: 1400, quality: 78 },
   { pattern: /^Tes Awal$/i, width: 1400, quality: 74 },
-  { pattern: /^bg (bride|groom)$/i, width: 1200, quality: 70, blur: 8, suffix: "-blur" },
+  { pattern: /^bg (bride|groom)$/i, width: 1200, quality: 72, blur: 3, suffix: "-soft-blur" },
   { pattern: /^(Desktop|Ending|Groom|ODS02206|IMG_5516\.JPG)$/i, width: 1600, quality: 78 }
 ];
 

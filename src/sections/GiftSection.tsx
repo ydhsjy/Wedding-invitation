@@ -29,7 +29,6 @@ export function GiftSection() {
         <MotionReveal>
           <article className="relative mx-auto w-full max-w-[20rem] overflow-hidden rounded-[1.75rem] bg-white px-5 py-8 text-center text-[#1f3340] shadow-[0_18px_36px_rgba(45,80,100,0.12)] ring-1 ring-[#d8d6d2]/80 sm:max-w-[23rem] sm:px-7 sm:py-9 lg:max-w-[26rem] lg:rounded-[2rem] lg:px-8 lg:py-7">
             <div className="mx-auto max-w-[18rem] lg:max-w-sm">
-              <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.21em] text-[#4e7085] lg:text-[6px]">Wedding Gift</p>
               <h2 className="mt-3 font-serif text-[34px] font-normal uppercase leading-[0.98] tracking-[0.04em] text-[#1f3340] sm:text-[42px] lg:text-[25px]">
                 Wedding Gift
               </h2>
