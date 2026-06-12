@@ -38,10 +38,10 @@ export function GiftSection() {
                   type="button"
                   onClick={() => setActivePanel((current) => (current === "digital" ? null : "digital"))}
                   aria-expanded={activePanel === "digital"}
-                  className="group mx-auto grid h-24 w-24 place-items-center rounded-lg border border-gold/35 bg-ivory/80 text-ink shadow-premium backdrop-blur transition hover:-translate-y-1 hover:border-gold hover:bg-gold sm:h-28 sm:w-28 lg:h-16 lg:w-16"
+                  className="group mx-auto grid h-24 w-24 place-items-center rounded-lg border border-[#315f9f] bg-[#315f9f] text-white shadow-premium backdrop-blur transition hover:-translate-y-1 hover:border-[#244a7f] hover:bg-[#244a7f] sm:h-28 sm:w-28 lg:h-16 lg:w-16"
                 >
-                  <span className="grid h-14 w-16 place-items-center rounded-md border border-ink/30 bg-ink/5 transition group-hover:bg-ivory/20 sm:h-16 sm:w-20 lg:h-10 lg:w-12">
-                    <Mail className="h-8 w-8 text-ink lg:h-5 lg:w-5" aria-hidden="true" />
+                  <span className="grid h-14 w-16 place-items-center rounded-md border border-white/35 bg-white/12 transition group-hover:bg-white/20 sm:h-16 sm:w-20 lg:h-10 lg:w-12">
+                    <Mail className="h-8 w-8 text-white lg:h-5 lg:w-5" aria-hidden="true" />
                   </span>
                   <span className="sr-only">{activePanel === "digital" ? "Tutup amplop digital" : "Buka amplop digital"}</span>
                 </button>
@@ -52,10 +52,10 @@ export function GiftSection() {
                   type="button"
                   onClick={() => setActivePanel((current) => (current === "present" ? null : "present"))}
                   aria-expanded={activePanel === "present"}
-                  className="group mx-auto grid h-24 w-24 place-items-center rounded-lg border border-gold/35 bg-ivory/80 text-ink shadow-premium backdrop-blur transition hover:-translate-y-1 hover:border-gold hover:bg-gold sm:h-28 sm:w-28 lg:h-16 lg:w-16"
+                  className="group mx-auto grid h-24 w-24 place-items-center rounded-lg border border-[#315f9f] bg-[#315f9f] text-white shadow-premium backdrop-blur transition hover:-translate-y-1 hover:border-[#244a7f] hover:bg-[#244a7f] sm:h-28 sm:w-28 lg:h-16 lg:w-16"
                 >
-                  <span className="grid h-14 w-16 place-items-center rounded-md border border-ink/30 bg-ink/5 transition group-hover:bg-ivory/20 sm:h-16 sm:w-20 lg:h-10 lg:w-12">
-                    <Gift className="h-8 w-8 text-ink lg:h-5 lg:w-5" aria-hidden="true" />
+                  <span className="grid h-14 w-16 place-items-center rounded-md border border-white/35 bg-white/12 transition group-hover:bg-white/20 sm:h-16 sm:w-20 lg:h-10 lg:w-12">
+                    <Gift className="h-8 w-8 text-white lg:h-5 lg:w-5" aria-hidden="true" />
                   </span>
                   <span className="sr-only">{activePanel === "present" ? "Tutup alamat hadiah" : "Buka alamat hadiah"}</span>
                 </button>

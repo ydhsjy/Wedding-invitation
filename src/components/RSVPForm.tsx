@@ -53,7 +53,9 @@ export function RSVPForm({ initialWishes }: { initialWishes: Wish[] }) {
                   key={item}
                   onClick={() => setStatus(item)}
                   className={`rounded-md border px-4 py-3 font-button text-[15px] font-bold transition lg:text-[8px] ${
-                    status === item ? "border-gold bg-gold text-ivory" : "border-gold/25 bg-ivory text-ink"
+                    status === item
+                      ? "border-[#315f9f] bg-[#315f9f] text-white shadow-[0_10px_22px_rgba(49,95,159,0.24)]"
+                      : "border-[#315f9f]/35 bg-[#edf4ff] text-[#315f9f] hover:border-[#315f9f] hover:bg-[#dceafe]"
                   }`}
                 >
                   {item}

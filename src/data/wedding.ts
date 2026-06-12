@@ -70,7 +70,7 @@ export const wedding = {
     quoteFrame: assetPath("/assets/bg%20frame.png"),
     quoteSecondFrame: assetPath("/assets/bg%20quote.png"),
     countdown: assetPath("/assets/bg%20quote.png"),
-    marriageQuote: assetPath("/assets/bg%20mariage.jpeg"),
+    marriageQuote: assetPath("/assets/Tes1.jpg"),
     closing: assetPath("/assets/Ending.jpg")
   },
   couples: [
