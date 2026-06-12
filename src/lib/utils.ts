@@ -14,7 +14,7 @@ export function formatGuestName(value?: string) {
 }
 
 export function assetPath(path: string) {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/undangan-yudha-alda" : "");
   const assetVersion = process.env.NEXT_PUBLIC_ASSET_VERSION || "20260606-10";
   const cacheBuster = path.startsWith("/assets/") ? `${path.includes("?") ? "&" : "?"}v=${assetVersion}` : "";
 

@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repositoryName = "undangan-yudha-alda";
-const basePath = isGithubActions ? `/${repositoryName}` : "";
+const isProductionBuild = process.env.NODE_ENV === "production";
+const repositoryBasePath = "/undangan-yudha-alda";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (isGithubActions || isProductionBuild ? repositoryBasePath : "");
 
 const nextConfig: NextConfig = {
   output: "export",

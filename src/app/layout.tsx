@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import "@/styles/globals.css";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/undangan-yudha-alda" : "");
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ydhsjy.github.io";
 
 export const metadata: Metadata = {

@@ -5,9 +5,10 @@
   "scripts": {
     "prebuild": "node scripts/sync-assets.mjs",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/sync-root-export.mjs && node scripts/verify-publish-paths.mjs",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "verify:paths": "node scripts/verify-publish-paths.mjs"
   },
   "dependencies": {
     "clsx": "latest",

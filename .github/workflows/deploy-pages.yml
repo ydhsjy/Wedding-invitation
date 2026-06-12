@@ -42,6 +42,9 @@ jobs:
       - name: Disable Jekyll processing
         run: touch out/.nojekyll
 
+      - name: Verify publish paths
+        run: npm run verify:paths
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
