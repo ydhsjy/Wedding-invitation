@@ -19,13 +19,13 @@ export function CoupleSection() {
 
         <div className="relative mx-auto mt-14 grid max-w-4xl gap-8">
           {wedding.couples.map((person, index) => (
-            <MotionReveal key={person.name} delay={index * 0.12}>
+            <div key={person.name}>
               <article className="relative grid min-h-[18rem] overflow-hidden rounded-[1.75rem] bg-[#edf5f8] p-5 shadow-soft ring-1 ring-[#9bb8c8]/35 sm:grid-cols-[0.9fr_1.1fr] sm:items-center sm:p-7">
-                <Image src={person.background} alt="" fill sizes="(max-width: 768px) 95vw, 760px" className={`scale-105 object-cover opacity-16 blur-[2px] ${index === 0 ? "object-left" : ""}`} />
+                <Image src={person.background} alt="" fill sizes="(max-width: 768px) 95vw, 760px" className={`scale-105 object-cover opacity-14 ${index === 0 ? "object-left" : ""}`} />
                 <div className="absolute inset-0 bg-[#edf5f8]/78" aria-hidden="true" />
                 <div className={`relative z-10 mx-auto w-full max-w-[16rem] text-center sm:max-w-[18rem] ${index === 0 ? "sm:order-2 sm:mr-0" : "sm:order-1 sm:ml-0"}`}>
                   <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.21em] text-[#4e7085] lg:text-[6px]">{person.role}</p>
-                  <PhotoPop className="relative aspect-[3/4] overflow-hidden rounded-[52%_48%_47%_53%/42%_43%_57%_58%] bg-ivory shadow-soft" delay={0.1}>
+                  <PhotoPop className="relative aspect-[3/4] transform-gpu overflow-hidden rounded-[52%_48%_47%_53%/42%_43%_57%_58%] bg-ivory shadow-soft" delay={0.04}>
                     <Image src={person.image} alt={person.name} fill sizes="(max-width: 768px) 70vw, 260px" className="object-cover object-top" />
                   </PhotoPop>
                   <div className="nickname-titlecase mx-auto mt-4 w-fit border-b border-[#5d8195]/70 px-5 pb-1 text-[42px] font-normal leading-none text-[#31566b] sm:text-[52px] lg:text-[26px]">
@@ -38,7 +38,7 @@ export function CoupleSection() {
                 </div>
               </article>
               {index === 0 ? <div className="my-1 text-center font-script text-[57px] font-normal leading-none text-ink lg:text-[29px]">&</div> : null}
-            </MotionReveal>
+            </div>
           ))}
         </div>
       </Container>

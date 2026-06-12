@@ -13,6 +13,7 @@ export function PhotoPop({ children, className, delay = 0 }: PhotoPopProps) {
   return (
     <motion.div
       className={className}
+      style={{ willChange: "transform, opacity" }}
       initial={{ opacity: 0, scale: 0.92, y: 18 }}
       whileInView={{
         opacity: 1,
@@ -20,7 +21,7 @@ export function PhotoPop({ children, className, delay = 0 }: PhotoPopProps) {
         y: 0
       }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay }}
+      transition={{ duration: 0.48, ease: [0.25, 1, 0.5, 1], delay }}
     >
       {children}
     </motion.div>

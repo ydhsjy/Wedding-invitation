@@ -15,9 +15,10 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
   return (
     <motion.section
       className="fixed inset-0 z-50 grid min-h-svh place-items-center overflow-hidden bg-ink text-center text-ivory"
+      style={{ willChange: "opacity" }}
       initial={false}
-      animate={isOpen ? { opacity: 0, y: -22, pointerEvents: "none" } : { opacity: 1, y: 0 }}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+      animate={isOpen ? { opacity: 0, pointerEvents: "none" } : { opacity: 1 }}
+      transition={{ duration: 0.42, ease: [0.25, 1, 0.5, 1] }}
       aria-hidden={isOpen}
     >
       <div className="absolute inset-0">
@@ -27,9 +28,9 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
       <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-ink/55 to-transparent" />
       <motion.div
         className="relative z-10 flex min-h-svh w-full max-w-md flex-col px-6 pb-8 pt-24 sm:pb-20"
-        initial={{ opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       >
         <div>
           <p className="font-sans text-sm font-semibold uppercase tracking-[0.21em] text-gold sm:text-base lg:text-[8px]">The Wedding of</p>
@@ -38,7 +39,7 @@ export function OpeningSection({ guestName, onOpen, isOpen }: OpeningSectionProp
         </div>
 
         <div className="mt-auto">
-          <div className="mx-auto w-[82%] translate-y-28 rounded-md border border-ivory/24 bg-ivory/10 px-4 py-4 backdrop-blur-md sm:translate-y-20">
+          <div className="mx-auto w-[82%] translate-y-28 rounded-md border border-ivory/24 bg-ivory/12 px-4 py-4 sm:translate-y-20">
             <p className="text-xs text-ivory/80 lg:text-[6px]">Dear,</p>
             <p className="mt-1.5 font-serif text-[18px] font-semibold leading-none sm:text-[20px] lg:text-[9px]">{guestName}</p>
             <p className="mt-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-gold lg:text-[5px]">You are invited</p>
