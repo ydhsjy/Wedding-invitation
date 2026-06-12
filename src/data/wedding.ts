@@ -61,10 +61,9 @@ export const wedding = {
       assetPath("/assets/Slide7.jpg"),
       assetPath("/assets/Slide8.jpg")
     ],
-    opening: assetPath("/assets/awal.jpeg"),
+    opening: assetPath("/assets/Tes%20Awal.jpg"),
     desktop: assetPath("/assets/optimized/Desktop.webp"),
     hero: assetPath("/assets/kanan%20awal.jpeg"),
-    sectionDivider: assetPath("/assets/bg%20section.jpeg"),
     marriageDivider: assetPath("/assets/bg%20mariage.jpeg"),
     quote: assetPath("/assets/bg1.jpeg"),
     quoteFrame: assetPath("/assets/bg%20frame.png"),

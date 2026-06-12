@@ -19,6 +19,12 @@ export function FooterSection() {
           </p>
           <p className="mt-8 font-serif text-[17px] leading-7 text-clay sm:text-[26px] sm:leading-[1.3] lg:mt-6 lg:text-[14px]">Kami yang berbahagia,</p>
           <h2 className="couple-name-titlecase mt-5 whitespace-nowrap font-script text-[50px] font-normal leading-none text-ink sm:text-[66px] lg:text-[34px]">{wedding.coupleNames}</h2>
+          <p className="mt-4 font-serif text-[16px] font-semibold uppercase tracking-[0.16em] text-[#315f9f] sm:text-[19px] lg:text-[10px]">
+            {wedding.dateLabel}
+          </p>
+          <p className="mx-auto mt-6 max-w-xl font-serif text-[16px] leading-7 text-clay sm:text-[22px] sm:leading-8 lg:mt-4 lg:text-[12px] lg:leading-5">
+            Terima kasih telah menjadi bagian dari doa dan sukacita kami.
+          </p>
         </MotionReveal>
       </Container>
       <div className="relative h-36 w-full overflow-hidden bg-white sm:h-44 lg:h-32" aria-hidden="true">

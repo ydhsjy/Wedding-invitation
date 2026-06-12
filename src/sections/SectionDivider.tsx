@@ -1,23 +1,12 @@
-import Image from "next/image";
-import { wedding } from "@/data/wedding";
-
-type SectionDividerProps = {
-  image?: string;
-  position?: "top" | "bottom";
-};
-
-export function SectionDivider({ image = wedding.images.sectionDivider, position = "top" }: SectionDividerProps) {
+export function SectionDivider() {
   return (
-    <section className="relative h-32 overflow-hidden bg-white sm:h-40 lg:h-28" aria-hidden="true">
-      {image ? (
-        <Image
-          src={image}
-          alt=""
-          fill
-          sizes="(max-width: 1024px) 100vw, 640px"
-          className={`object-cover ${position === "bottom" ? "object-bottom" : "object-top"}`}
+    <section className="relative z-10 -mt-20 h-20 overflow-hidden bg-transparent sm:-mt-24 sm:h-24 lg:-mt-16 lg:h-16" aria-hidden="true">
+      <svg className="absolute inset-x-0 bottom-0 h-full w-full" viewBox="0 0 640 120" preserveAspectRatio="none">
+        <path
+          d="M0 72 C96 22 190 22 304 64 C424 108 534 110 640 56 L640 120 L0 120 Z"
+          className="fill-white"
         />
-      ) : null}
+      </svg>
     </section>
   );
 }

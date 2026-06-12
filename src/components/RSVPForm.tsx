@@ -8,6 +8,8 @@ import { WishCard } from "@/components/WishCard";
 export function RSVPForm({ initialWishes }: { initialWishes: Wish[] }) {
   const [wishes, setWishes] = useState<Wish[]>(initialWishes);
   const [status, setStatus] = useState<Wish["attendance"]>("Hadir");
+  const actionButtonClass = "border-[#315f9f] bg-[#315f9f] text-white shadow-[0_10px_22px_rgba(49,95,159,0.2)]";
+  const mutedButtonClass = "border-[#6f91bd]/45 bg-[#5d8195] text-white hover:border-[#315f9f] hover:bg-[#315f9f]";
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -41,7 +43,7 @@ export function RSVPForm({ initialWishes }: { initialWishes: Wish[] }) {
               name="name"
               required
               placeholder="Nama Anda"
-              className="rounded-md border border-gold/25 bg-ivory px-4 py-3 font-serif text-base normal-case leading-6 tracking-normal text-ink outline-none transition focus:border-gold lg:text-[8px] lg:leading-3"
+              className="rounded-md border border-[#6f91bd]/35 bg-white px-4 py-3 font-serif text-base normal-case leading-6 tracking-normal text-ink outline-none transition focus:border-[#315f9f] lg:text-[8px] lg:leading-3"
             />
           </label>
           <fieldset className="grid gap-3">
@@ -53,9 +55,7 @@ export function RSVPForm({ initialWishes }: { initialWishes: Wish[] }) {
                   key={item}
                   onClick={() => setStatus(item)}
                   className={`rounded-md border px-4 py-3 font-button text-[15px] font-bold transition lg:text-[8px] ${
-                    status === item
-                      ? "border-[#315f9f] bg-[#315f9f] text-white shadow-[0_10px_22px_rgba(49,95,159,0.24)]"
-                      : "border-[#315f9f]/35 bg-[#edf4ff] text-[#315f9f] hover:border-[#315f9f] hover:bg-[#dceafe]"
+                    status === item ? actionButtonClass : mutedButtonClass
                   }`}
                 >
                   {item}
@@ -69,12 +69,12 @@ export function RSVPForm({ initialWishes }: { initialWishes: Wish[] }) {
               name="message"
               rows={5}
               placeholder="Tulis doa dan ucapan"
-              className="resize-none rounded-md border border-gold/25 bg-ivory px-4 py-3 font-serif text-base normal-case leading-6 tracking-normal text-ink outline-none transition focus:border-gold lg:text-[8px] lg:leading-3"
+              className="resize-none rounded-md border border-[#6f91bd]/35 bg-white px-4 py-3 font-serif text-base normal-case leading-6 tracking-normal text-ink outline-none transition focus:border-[#315f9f] lg:text-[8px] lg:leading-3"
             />
           </label>
           <button
             type="submit"
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-[#315f9f] px-6 py-3 font-sans text-sm font-medium text-white transition hover:bg-[#244a7f] lg:text-[7px]"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-[#6f91bd]/45 bg-[#5d8195] px-6 py-3 font-sans text-sm font-medium text-white shadow-[0_14px_30px_rgba(49,95,159,0.18)] transition hover:border-[#315f9f] hover:bg-[#315f9f] lg:text-[7px]"
           >
             <Send className="h-4 w-4" aria-hidden="true" />
             Kirim Ucapan

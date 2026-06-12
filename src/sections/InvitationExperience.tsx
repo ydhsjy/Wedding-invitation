@@ -6,6 +6,7 @@ import { LoadingScreen } from "@/components/LoadingScreen";
 import { DesktopScene } from "@/components/DesktopScene";
 import { MobileNav } from "@/components/MobileNav";
 import { MusicButton, type MusicButtonHandle } from "@/components/MusicButton";
+import { RoseBackground } from "@/components/RoseBackground";
 import { wedding } from "@/data/wedding";
 import { useLockBody } from "@/hooks/useLockBody";
 import { formatGuestName } from "@/lib/utils";
@@ -54,6 +55,7 @@ export function InvitationExperience({ guestName }: { guestName?: string }) {
       <OpeningSection guestName={recipient} isOpen={opened} onOpen={openInvitation} />
       <DesktopScene />
       <main className="relative ml-auto min-h-svh w-full overflow-hidden bg-white shadow-[0_0_80px_rgba(0,0,0,0.32)] lg:w-[min(42vw,640px)]">
+        <RoseBackground />
         <HeroSection />
         <SectionDivider />
         <QuoteSection />

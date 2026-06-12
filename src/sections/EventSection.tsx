@@ -43,7 +43,7 @@ export function EventSection() {
                     href={event.mapUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-full bg-[#315f9f] px-6 font-serif text-[17px] font-semibold text-white shadow-soft transition hover:bg-[#244a7f] lg:text-[9px]"
+                    className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-full border border-[#6f91bd]/45 bg-[#5d8195] px-6 font-serif text-[17px] font-semibold text-white shadow-[0_14px_30px_rgba(49,95,159,0.18)] transition hover:border-[#315f9f] hover:bg-[#315f9f] lg:text-[9px]"
                   >
                     <MapPin className="h-4 w-4" aria-hidden="true" />
                     Google Maps

@@ -33,6 +33,11 @@ for (const file of files) {
   const source = join(assets, file);
   const target = join(optimized, `${baseName}.webp`);
   const sourceStat = await stat(source);
+  const targetStat = await stat(target).catch(() => null);
+
+  if (targetStat && targetStat.mtimeMs >= sourceStat.mtimeMs) {
+    continue;
+  }
 
   await sharp(source, { failOn: "none" })
     .rotate()
@@ -45,6 +50,6 @@ for (const file of files) {
     .webp({ quality: profile.quality, effort: 4 })
     .toFile(target);
 
-  const targetStat = await stat(target);
-  console.log(`${file} -> optimized/${baseName}.webp (${sourceStat.size} -> ${targetStat.size})`);
+  const optimizedStat = await stat(target);
+  console.log(`${file} -> optimized/${baseName}.webp (${sourceStat.size} -> ${optimizedStat.size})`);
 }
