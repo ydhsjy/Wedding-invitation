@@ -13,15 +13,14 @@ export function PhotoPop({ children, className, delay = 0 }: PhotoPopProps) {
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, scale: 0.72, y: 42, filter: "blur(16px)" }}
+      initial={{ opacity: 0, scale: 0.92, y: 18 }}
       whileInView={{
-        opacity: [0, 1, 1],
-        scale: [0.72, 1.035, 1],
-        y: [42, -4, 0],
-        filter: ["blur(16px)", "blur(0px)", "blur(0px)"]
+        opacity: 1,
+        scale: 1,
+        y: 0
       }}
-      viewport={{ once: true, margin: "-110px" }}
-      transition={{ duration: 1.12, times: [0, 0.72, 1], ease: [0.16, 1, 0.3, 1], delay }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay }}
     >
       {children}
     </motion.div>
