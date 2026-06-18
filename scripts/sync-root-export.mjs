@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const source = "out";
 const rootPublishEntries = [
+  "CNAME",
   ".nojekyll",
   "404.html",
   "_next",

@@ -1,10 +1,15 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
-const forbiddenPath = "/Wedding-invitation/";
-const requiredPath = "/undangan-yudha-alda/";
+const forbiddenPaths = [
+  "/Wedding-invitation/",
+  "/undangan-yudha-alda/",
+  "https://ydhsjy.github.io"
+];
+const requiredPath = "/assets/";
 const scanRoots = ["out", "."];
 const rootPublishEntries = new Set([
+  "CNAME",
   ".nojekyll",
   "404.html",
   "_next",
@@ -55,8 +60,10 @@ for (const root of scanRoots) {
 
   for (const filePath of paths) {
     const content = readFileSync(filePath, "utf8");
-    if (content.includes(forbiddenPath)) {
-      violations.push(filePath);
+    for (const forbiddenPath of forbiddenPaths) {
+      if (content.includes(forbiddenPath)) {
+        violations.push({ filePath, forbiddenPath });
+      }
     }
     if (content.includes(requiredPath)) {
       hasRequiredPath = true;
@@ -66,8 +73,8 @@ for (const root of scanRoots) {
 
 if (violations.length > 0) {
   throw new Error(
-    `Forbidden publish path '${forbiddenPath}' found in:\n${violations
-      .map((path) => `- ${path}`)
+    `Forbidden publish path found in:\n${violations
+      .map(({ filePath, forbiddenPath }) => `- ${filePath}: ${forbiddenPath}`)
       .join("\n")}`
   );
 }
@@ -76,4 +83,4 @@ if (!hasRequiredPath) {
   throw new Error(`Expected publish path '${requiredPath}' was not found in static output.`);
 }
 
-console.log(`Publish paths verified: using '${requiredPath}' and not '${forbiddenPath}'.`);
+console.log(`Publish paths verified: using root asset paths and no legacy GitHub Pages paths.`);

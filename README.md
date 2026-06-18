@@ -46,11 +46,11 @@ This repository deploys automatically through GitHub Actions when changes are pu
 Live URL:
 
 ```txt
-https://ydhsjy.github.io/undangan-yudha-alda/
+https://undanganaldayudha.my.id/
 ```
 
 With guest name:
 
 ```txt
-https://ydhsjy.github.io/undangan-yudha-alda/?to=Bang+Albertus+Yudha+Sanjaya
+https://undanganaldayudha.my.id/?to=Bang+Albertus+Yudha+Sanjaya
 ```
