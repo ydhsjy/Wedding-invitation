@@ -3,13 +3,17 @@ import type { ReactNode } from "react";
 import "@/styles/globals.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://undanganaldayudha.my.id";
-const previewImage = `${basePath}/assets/og-whatsapp.jpg`;
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://undanganaldayudha.my.id").replace(/\/?$/, "/");
+const metadataBase = new URL(siteUrl);
+const previewImage = new URL(`${basePath}/assets/og-whatsapp.jpg`, metadataBase).toString();
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase,
   title: "The Wedding of Yudha & Alda",
   description: "A modern luxury wedding invitation for Yudha and Alda.",
+  alternates: {
+    canonical: siteUrl
+  },
   openGraph: {
     title: "The Wedding of Yudha & Alda",
     description: "You are invited to celebrate the wedding of Yudha and Alda.",

@@ -10,7 +10,11 @@ export function formatGuestName(value?: string) {
     return "Bapak/Ibu/Saudara/i";
   }
 
-  return decodeURIComponent(value.replace(/\+/g, " ")).trim() || "Bapak/Ibu/Saudara/i";
+  try {
+    return decodeURIComponent(value.replace(/\+/g, " ")).trim() || "Bapak/Ibu/Saudara/i";
+  } catch {
+    return value.replace(/\+/g, " ").trim() || "Bapak/Ibu/Saudara/i";
+  }
 }
 
 export function assetPath(path: string) {

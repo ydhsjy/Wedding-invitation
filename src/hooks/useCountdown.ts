@@ -4,12 +4,15 @@ import { useEffect, useMemo, useState } from "react";
 
 export function useCountdown(target: string) {
   const targetTime = useMemo(() => new Date(target).getTime(), [target]);
-  const [now, setNow] = useState<number | null>(null);
+  const [now, setNow] = useState<number | null>(() => null);
 
   useEffect(() => {
-    setNow(Date.now());
+    const initialId = window.setTimeout(() => setNow(Date.now()), 0);
     const id = window.setInterval(() => setNow(Date.now()), 1000);
-    return () => window.clearInterval(id);
+    return () => {
+      window.clearTimeout(initialId);
+      window.clearInterval(id);
+    };
   }, []);
 
   const distance = Math.max(0, targetTime - (now ?? targetTime));
