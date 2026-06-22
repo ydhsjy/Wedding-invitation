@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://undanganaldayudha.my.id";
+const previewImage = `${basePath}/assets/og-whatsapp.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -12,8 +13,23 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Wedding of Yudha & Alda",
     description: "You are invited to celebrate the wedding of Yudha and Alda.",
-    images: [`${basePath}/assets/kanan%20awal.jpeg`],
+    url: siteUrl,
+    siteName: "The Wedding of Yudha & Alda",
+    images: [
+      {
+        url: previewImage,
+        width: 1200,
+        height: 630,
+        alt: "The Wedding of Yudha & Alda"
+      }
+    ],
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Wedding of Yudha & Alda",
+    description: "You are invited to celebrate the wedding of Yudha and Alda.",
+    images: [previewImage]
   }
 };
 
